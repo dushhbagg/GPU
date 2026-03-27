@@ -1,0 +1,1639 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Premium NVIDIA GeForce RTX Graphics Cards - RTX 5090, 5080, 4090, 4080 Super, 4070 Super. Best prices, fast shipping, 2-year warranty." />
+  <meta name="keywords" content="NVIDIA RTX, GeForce, Graphics Cards, Gaming, Ray Tracing, DLSS, GeForce Store" />
+
+  <title>GeForce Store - Premium NVIDIA GeForce RTX Graphics Cards</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="logo.png" alt="GeForce Store" height="40" class="me-2" style="border-radius:4px;" />
+        <span class="fw-bold fs-4 ms-2">GeForce Store</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="graphics-cards.html">Graphics Cards</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="laptops.html">Laptops</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#compareModal">Compare</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#support">Support</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-box me-3">
+            <input type="text" class="form-control" placeholder="Search GPUs..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="nav-icons dropstart">
+            <a href="#" class="nav-icon" title="Wishlist" style="margin-right: 15px;">
+              <i class="fas fa-heart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" title="Cart" style="margin-right: 15px;">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+              title="Account" style="text-decoration: none;">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark mt-4" aria-labelledby="accountDropdown"
+              id="accountDropdownMenu">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section bg-dark no-bg-image">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6 text-center text-lg-start mt-5 pt-5">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="text-gradient">GeForce RTX</span><br />
+              Graphics Card Family
+            </h1>
+            <p class="hero-description mx-auto mx-lg-0">
+              Experience the future of gaming and content creation with
+              NVIDIA's RTX series. Featuring cutting-edge Ada Lovelace and
+              Ada-Next architectures, these GPUs deliver unprecedented
+              performance with real-time ray tracing, AI-powered DLSS 4, and
+              advanced creator workflows.
+            </p>
+            <div class="hero-features justify-content-center justify-content-lg-start">
+              <div class="feature-item">
+                <i class="fas fa-bolt text-warning"></i>
+                <span>RT Cores</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-brain text-info"></i>
+                <span>Tensor Cores</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-magic text-success"></i>
+                <span>DLSS 4</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-palette text-danger"></i>
+                <span>Studio Ready</span>
+              </div>
+            </div>
+            <div class="hero-buttons d-flex justify-content-center justify-content-lg-start">
+              <a href="#products" class="btn btn-primary btn-lg me-3" style="font-weight: 700;">
+                <i class="fas fa-shopping-cart me-2"></i>Shop Now
+              </a>
+              <a href="#" class="btn btn-outline-light btn-lg" style="font-weight: 700;" data-bs-toggle="modal" data-bs-target="#compareModal">
+                <i class="fas fa-chart-bar me-2"></i>Compare GPUs
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block mt-5 pt-5 text-center fade-in">
+          <img src="RTX 5090 main.png" alt="Premium RTX Graphics Card" class="img-fluid hero-gpu-image"
+            style="transform: scale(1.1) rotate(-5deg); filter: drop-shadow(0 0 40px rgba(118, 185, 0, 0.4));" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-truck text-primary"></i>
+            <h6>Free Shipping</h6>
+            <small>On all orders</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-shield-alt text-success"></i>
+            <h6>2-Year Warranty</h6>
+            <small>Full coverage</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-lock text-warning"></i>
+            <h6>Secure Payment</h6>
+            <small>SSL encrypted</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-headset text-info"></i>
+            <h6>24/7 Support</h6>
+            <small>Always here</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose GeForce RTX</h2>
+        <p class="section-subtitle">
+          Cutting-edge technology for gaming and content creation
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h5>DLSS 4</h5>
+            <p>
+              AI-powered super resolution that multiplies frame rates while
+              maintaining image quality.
+            </p>
+            <ul class="feature-list">
+              <li>AI upscaling</li>
+              <li>Frame generation</li>
+              <li>Reflex latency reduction</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h5>Ray Tracing</h5>
+            <p>
+              Real-time, cinematic lighting and reflections with
+              next-generation RT Cores.
+            </p>
+            <ul class="feature-list">
+              <li>Global illumination</li>
+              <li>Real-time reflections</li>
+              <li>Dynamic shadows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h5>NVIDIA Studio</h5>
+            <p>
+              Optimized drivers and tools for professional content creation
+              workflows.
+            </p>
+            <ul class="feature-list">
+              <li>Studio drivers</li>
+              <li>Hardware acceleration</li>
+              <li>8K video editing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h5>AI Acceleration</h5>
+            <p>
+              Harness AI for enhanced productivity and creative workflows.
+            </p>
+            <ul class="feature-list">
+              <li>RTX Video enhancement</li>
+              <li>AI upscaling</li>
+              <li>Generative AI support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-nvidia" class="py-5" style="
+        background: rgba(118, 185, 0, 0.05);
+        border-top: 1px solid rgba(118, 185, 0, 0.2);
+        border-bottom: 1px solid rgba(118, 185, 0, 0.2);
+      ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="section-title mb-4">Powered by NVIDIA</h2>
+          <h4 class="text-white mb-3">The Inventor of the GPU</h4>
+          <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8">
+            NVIDIA pioneered GPU accelerated computing. In 1999, their
+            invention of the GPU sparked the growth of the PC gaming market,
+            redefined modern computer graphics, and revolutionized parallel
+            computing. Today, NVIDIA's groundbreaking RTX series utilizes
+            advanced ray tracing and AI functionality to push the envelope of
+            visual computing further than ever before.
+          </p>
+          <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8">
+            Whether you are a professional creator rendering 8K video, a data
+            scientist running complex AI models, or an enthusiast gamer
+            exploring hyper-realistic virtual worlds, NVIDIA GeForce graphics
+            cards provide the definitive computing performance.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <span class="badge bg-dark border border-secondary p-2"><i
+                class="fas fa-check text-success me-2"></i>Official
+              Partner</span>
+            <span class="badge bg-dark border border-secondary p-2"><i
+                class="fas fa-check text-success me-2"></i>Authentic
+              Hardware</span>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="nvidia.png" alt="NVIDIA Logo" class="img-fluid" style="
+                max-height: 250px;
+                opacity: 0.8;
+                filter: drop-shadow(0 0 20px rgba(118, 185, 0, 0.4));
+              " />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Best Selling Products</h2>
+        <p class="section-subtitle">
+          Premium NVIDIA GeForce RTX Graphics Cards
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge">Latest</div>
+            <div class="product-image">
+              <img src="RTX 5090 main.png" alt="RTX 5090" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 5090</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>21,760 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32 GB GDDR7</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.41 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>520W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹219,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-5090"
+                  data-name="NVIDIA GeForce RTX 5090" data-price="219000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-5090"
+                  data-name="NVIDIA GeForce RTX 5090" data-price="219000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Popular</div>
+            <div class="product-image">
+              <img src="RTX 4090 main.png" alt="RTX 4090" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4090</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>16,384 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>24 GB GDDR6X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.52 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>450W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹158,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4090"
+                  data-name="NVIDIA GeForce RTX 4090" data-price="158000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4090"
+                  data-name="NVIDIA GeForce RTX 4090" data-price="158000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX 5080 main.png" alt="RTX 5080" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 5080</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>15,360 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16 GB GDDR7</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.62 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>320W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹110,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-5080"
+                  data-name="NVIDIA GeForce RTX 5080" data-price="110000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-5080"
+                  data-name="NVIDIA GeForce RTX 5080" data-price="110000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX-4080-SUPER.png" alt="RTX 4080 Super" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4080 Super</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>10,240 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16 GB GDDR6X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.55 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>320W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹105,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4080-super"
+                  data-name="NVIDIA GeForce RTX 4080 Super" data-price="105000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4080-super"
+                  data-name="NVIDIA GeForce RTX 4080 Super" data-price="105000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX-4070-SUPER.png" alt="RTX 4070 Super" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4070 Super</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>7,168 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>12 GB GDDR6X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.48 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>220W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹63,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4070-super"
+                  data-name="NVIDIA GeForce RTX 4070 Super" data-price="63000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4070-super"
+                  data-name="NVIDIA GeForce RTX 4070 Super" data-price="63000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX 5070 main.png" alt="RTX 5070" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 5070</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>6,144 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>12 GB GDDR7</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.51 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>200W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹60,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-5070"
+                  data-name="NVIDIA GeForce RTX 5070" data-price="60000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-5070"
+                  data-name="NVIDIA GeForce RTX 5070" data-price="60000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX-4080.jpg" alt="RTX 4080" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4080</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>9,728 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16 GB GDDR6X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.51 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>320W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹95,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4080"
+                  data-name="NVIDIA GeForce RTX 4080" data-price="95000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4080"
+                  data-name="NVIDIA GeForce RTX 4080" data-price="95000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX-4070-SUPER.png" alt="RTX 4070 Ti Super" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4070 Ti Super</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>8,448 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16 GB GDDR6X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.61 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>285W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹82,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4070-ti-super"
+                  data-name="NVIDIA GeForce RTX 4070 Ti Super" data-price="82000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4070-ti-super"
+                  data-name="NVIDIA GeForce RTX 4070 Ti Super" data-price="82000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="4060.jpg" alt="RTX 4060 Ti" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4060 Ti</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>4,352 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>8 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>2.54 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>160W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹38,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-4060-ti"
+                  data-name="NVIDIA GeForce RTX 4060 Ti" data-price="38000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-4060-ti"
+                  data-name="NVIDIA GeForce RTX 4060 Ti" data-price="38000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="3070.jpg" alt="RTX 3070" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 3070</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>5,888 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>8 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.73 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>220W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹45,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-3070"
+                  data-name="NVIDIA GeForce RTX 3070" data-price="45000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-3070"
+                  data-name="NVIDIA GeForce RTX 3070" data-price="45000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="3060ti.jpg" alt="RTX 3060 Ti" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 3060 Ti</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>4,864 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>8 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.67 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>200W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹35,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-3060-ti"
+                  data-name="NVIDIA GeForce RTX 3060 Ti" data-price="35000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-3060-ti"
+                  data-name="NVIDIA GeForce RTX 3060 Ti" data-price="35000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="3050.jpg" alt="RTX 3050" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 3050</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>2,560 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>8 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.78 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>130W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹25,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-3050"
+                  data-name="NVIDIA GeForce RTX 3050" data-price="25000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-3050"
+                  data-name="NVIDIA GeForce RTX 3050" data-price="25000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="1080ti.png" alt="GTX 1080 Ti" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce GTX 1080 Ti</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>3,584 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>11 GB GDDR5X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.58 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>250W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹30,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="gtx-1080-ti"
+                  data-name="NVIDIA GeForce GTX 1080 Ti" data-price="30000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="gtx-1080-ti"
+                  data-name="NVIDIA GeForce GTX 1080 Ti" data-price="30000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="2080ti.jpg" alt="RTX 2080 Ti" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 2080 Ti</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>4,352 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>11 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.63 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>250W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹40,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-2080-ti"
+                  data-name="NVIDIA GeForce RTX 2080 Ti" data-price="40000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-2080-ti"
+                  data-name="NVIDIA GeForce RTX 2080 Ti" data-price="40000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="2070super.jpg" alt="RTX 2070 Super" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 2070 Super</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>2,560 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>8 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.77 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>215W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹32,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-2070-super"
+                  data-name="NVIDIA GeForce RTX 2070 Super" data-price="32000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-2070-super"
+                  data-name="NVIDIA GeForce RTX 2070 Super" data-price="32000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="2050.jpg" alt="RTX 2060" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 2060</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>1,920 CUDA Cores</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>6 GB GDDR6</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-bolt text-danger"></i>
+                  <span>1.68 GHz Boost</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-plug text-primary"></i>
+                  <span>160W TGP</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹22,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="rtx-2060"
+                  data-name="NVIDIA GeForce RTX 2060" data-price="22000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="rtx-2060"
+                  data-name="NVIDIA GeForce RTX 2060" data-price="22000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Compare GPUs Modal -->
+  <div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border-secondary">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="compareModalLabel"><i class="fas fa-chart-bar me-2"></i>Compare GPUs</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-4">
+            <div class="col-md-5">
+              <label class="form-label form-label-lg" style="font-weight: 600;">Select First GPU</label>
+              <select class="form-select form-select-lg bg-dark text-white border-secondary" id="gpuSelect1" style="font-weight: 500;">
+                <option value="">-- Choose a GPU --</option>
+              </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end justify-content-center pb-1">
+              <button class="btn btn-primary btn-lg w-100 mb-0" id="btnCompareAction" style="font-weight: 700; height: 48px;"><i class="fas fa-exchange-alt me-2"></i>Compare</button>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label form-label-lg" style="font-weight: 600;">Select Second GPU</label>
+              <select class="form-select form-select-lg bg-dark text-white border-secondary" id="gpuSelect2" style="font-weight: 500;">
+                <option value="">-- Choose a GPU --</option>
+              </select>
+            </div>
+          </div>
+          <div id="compareResults" style="display:none; animation: fadeIn 0.5s ease-in-out;">
+            <div class="alert text-center fw-bold fs-5 shadow-sm" id="compareWinnerAlert" role="alert" style="border: none;"></div>
+            <div class="table-responsive mt-3 rounded shadow-sm border border-secondary" style="overflow: hidden;">
+              <table class="table table-dark table-hover text-center align-middle mb-0">
+                <thead class="bg-secondary bg-opacity-25">
+                  <tr>
+                    <th width="20%" class="py-3 fs-6">Specification</th>
+                    <th width="40%" id="compHdr1" class="text-info fs-5 py-3"></th>
+                    <th width="40%" id="compHdr2" class="text-warning fs-5 py-3"></th>
+                  </tr>
+                </thead>
+                <tbody id="compareTableBody" class="fs-6" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #compareTableBody td:first-child { background: rgba(0,0,0,0.2) !important; font-weight: 600; text-align: left; padding-left: 1.5rem; }
+    #compareTableBody tr:hover { background-color: rgba(118, 185, 0, 0.05); }
+  </style>
+
+  <script>
+    const gpuDb = [
+      { name: "RTX 5090", arch: "Ada-Next", cores: "21,760", memory: "32 GB GDDR7", bus: "512-bit", clock: "2.41 GHz", tgp: "520W", price: "₹219,000", score: 100 },
+      { name: "RTX 5080", arch: "Ada-Next", cores: "15,360", memory: "16 GB GDDR7", bus: "256-bit", clock: "2.62 GHz", tgp: "320W", price: "₹110,000", score: 90 },
+      { name: "RTX 4090", arch: "Ada Lovelace", cores: "16,384", memory: "24 GB GDDR6X", bus: "384-bit", clock: "2.52 GHz", tgp: "450W", price: "₹158,000", score: 85 },
+      { name: "RTX 4080 Super", arch: "Ada Lovelace", cores: "10,240", memory: "16 GB GDDR6X", bus: "256-bit", clock: "2.55 GHz", tgp: "320W", price: "₹105,000", score: 80 },
+      { name: "RTX 4070 Super", arch: "Ada Lovelace", cores: "7,168", memory: "12 GB GDDR6X", bus: "192-bit", clock: "2.48 GHz", tgp: "220W", price: "₹63,000", score: 75 },
+      { name: "RTX 4080", arch: "Ada Lovelace", cores: "9,728", memory: "16 GB GDDR6X", bus: "256-bit", clock: "2.51 GHz", tgp: "320W", price: "₹95,000", score: 78 },
+      { name: "RTX 4070 Ti Super", arch: "Ada Lovelace", cores: "8,448", memory: "16 GB GDDR6X", bus: "256-bit", clock: "2.61 GHz", tgp: "285W", price: "₹82,000", score: 77 },
+      { name: "RTX 4060 Ti", arch: "Ada Lovelace", cores: "4,352", memory: "8 GB GDDR6", bus: "128-bit", clock: "2.54 GHz", tgp: "160W", price: "₹38,000", score: 65 },
+      { name: "RTX 3070", arch: "Ampere", cores: "5,888", memory: "8 GB GDDR6", bus: "256-bit", clock: "1.73 GHz", tgp: "220W", price: "₹45,000", score: 60 },
+      { name: "RTX 3060 Ti", arch: "Ampere", cores: "4,864", memory: "8 GB GDDR6", bus: "256-bit", clock: "1.67 GHz", tgp: "200W", price: "₹35,000", score: 58 },
+      { name: "RTX 3050", arch: "Ampere", cores: "2,560", memory: "8 GB GDDR6", bus: "128-bit", clock: "1.78 GHz", tgp: "130W", price: "₹25,000", score: 45 },
+      { name: "GTX 1080 Ti", arch: "Pascal", cores: "3,584", memory: "11 GB GDDR5X", bus: "352-bit", clock: "1.58 GHz", tgp: "250W", price: "₹30,000", score: 50 },
+      { name: "RTX 2080 Ti", arch: "Turing", cores: "4,352", memory: "11 GB GDDR6", bus: "352-bit", clock: "1.63 GHz", tgp: "250W", price: "₹40,000", score: 62 },
+      { name: "RTX 2070 Super", arch: "Turing", cores: "2,560", memory: "8 GB GDDR6", bus: "256-bit", clock: "1.77 GHz", tgp: "215W", price: "₹32,000", score: 55 },
+      { name: "RTX 2060", arch: "Turing", cores: "1,920", memory: "6 GB GDDR6", bus: "192-bit", clock: "1.68 GHz", tgp: "160W", price: "₹22,000", score: 48 }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sel1 = document.getElementById('gpuSelect1');
+      const sel2 = document.getElementById('gpuSelect2');
+      
+      if(sel1 && sel2) {
+        gpuDb.forEach((gpu, index) => {
+          sel1.add(new Option(gpu.name, index));
+          sel2.add(new Option(gpu.name, index));
+        });
+
+        document.getElementById('btnCompareAction').addEventListener('click', () => {
+          const idx1 = sel1.value;
+          const idx2 = sel2.value;
+          
+          if(idx1 === '' || idx2 === '') {
+            alert('Please select both GPUs to compare.');
+            return;
+          }
+          if(idx1 === idx2) {
+            alert('Please select two different GPUs.');
+            return;
+          }
+
+          const g1 = gpuDb[idx1];
+          const g2 = gpuDb[idx2];
+
+          document.getElementById('compHdr1').innerText = g1.name;
+          document.getElementById('compHdr2').innerText = g2.name;
+
+          const tbody = document.getElementById('compareTableBody');
+          tbody.innerHTML = `
+            <tr><td>Architecture</td><td>${g1.arch}</td><td>${g2.arch}</td></tr>
+            <tr><td>CUDA Cores</td><td>${g1.cores}</td><td>${g2.cores}</td></tr>
+            <tr><td>Memory</td><td>${g1.memory}</td><td>${g2.memory}</td></tr>
+            <tr><td>Memory Bus</td><td>${g1.bus}</td><td>${g2.bus}</td></tr>
+            <tr><td>Boost Clock</td><td>${g1.clock}</td><td>${g2.clock}</td></tr>
+            <tr><td>TGP</td><td>${g1.tgp}</td><td>${g2.tgp}</td></tr>
+            <tr><td>Price</td><td class="text-success fw-bold">${g1.price}</td><td class="text-success fw-bold">${g2.price}</td></tr>
+          `;
+
+          const winnerAlert = document.getElementById('compareWinnerAlert');
+          if (g1.score > g2.score) {
+            winnerAlert.className = 'alert alert-info text-center fw-bold mt-3 shadow-sm';
+            winnerAlert.style.backgroundColor = 'rgba(13, 202, 240, 0.1)';
+            winnerAlert.style.color = '#0dcaf0';
+            winnerAlert.innerHTML = `<i class="fas fa-trophy text-warning me-2 fs-4 align-middle"></i> ${g1.name} is the overall better performer!`;
+          } else {
+            winnerAlert.className = 'alert alert-warning text-center fw-bold mt-3 shadow-sm';
+            winnerAlert.style.backgroundColor = 'rgba(255, 193, 7, 0.1)';
+            winnerAlert.style.color = '#ffc107';
+            winnerAlert.innerHTML = `<i class="fas fa-trophy text-info me-2 fs-4 align-middle"></i> ${g2.name} is the overall better performer!`;
+          }
+          
+          document.getElementById('compareResults').style.display = 'block';
+        });
+      }
+    });
+  </script>
+
+  <section class="reviews-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-subtitle">
+          What our customers say about our products
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "The RTX 5090 is absolutely incredible. 4K gaming finally feels
+              effortless with ray tracing enabled. Worth every penny!"
+            </p>
+            <div class="review-author">
+              <strong>Arjun Patel</strong>
+              <small class="text-muted">Mumbai, India</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "DLSS 4 is a game-changer for my content creation workflow.
+              Blender renders are so much faster now."
+            </p>
+            <div class="review-author">
+              <strong>Neha Sharma</strong>
+              <small class="text-muted">Bangalore, India</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Excellent customer service and fast shipping. The RTX 4090
+              exceeded my expectations for 4K gaming."
+            </p>
+            <div class="review-author">
+              <strong>Kevin Davis</strong>
+              <small class="text-muted">New York, USA</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Get answers to common questions</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              <i class="fas fa-bolt text-warning me-2"></i>
+              Will an RTX 50 Series GPU work with my current PSU?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p><strong>Power Requirements:</strong></p>
+              <ul>
+                <li>
+                  <strong>RTX 5090:</strong> 520W TGP - Requires 850W+ PSU
+                  with PCIe 5.0 12VHPWR connector
+                </li>
+                <li>
+                  <strong>RTX 5080:</strong> 320W TGP - Requires 750W+ PSU
+                  with PCIe 5.0 12VHPWR connector
+                </li>
+                <li>
+                  <strong>RTX 4090:</strong> 450W TGP - Requires 850W+ PSU
+                  with PCIe 5.0 12VHPWR connector
+                </li>
+              </ul>
+              <p class="text-muted">
+                Always check your total system wattage and ensure your PSU has
+                adequate headroom (20% above total system draw).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              <i class="fas fa-chart-bar text-info me-2"></i>
+              What's the difference between RTX 5080 and 5090?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6 class="text-success">RTX 5090 (Flagship)</h6>
+                  <ul class="small">
+                    <li>21,760 CUDA Cores</li>
+                    <li>32 GB GDDR7 Memory</li>
+                    <li>512-bit Memory Bus</li>
+                    <li>520W TGP</li>
+                    <li>4K Ultra Gaming at 120+ FPS</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="text-primary">RTX 5080 (High-End)</h6>
+                  <ul class="small">
+                    <li>15,360 CUDA Cores</li>
+                    <li>16 GB GDDR7 Memory</li>
+                    <li>256-bit Memory Bus</li>
+                    <li>320W TGP</li>
+                    <li>4K Gaming at 60+ FPS</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="mt-2">
+                <strong>Choose RTX 5090 for:</strong> Maximum performance, 4K
+                gaming, AI workloads, content creation
+              </p>
+              <p>
+                <strong>Choose RTX 5080 for:</strong> High-end gaming,
+                1440p/4K gaming, excellent price-to-performance
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              <i class="fas fa-magic text-success me-2"></i>
+              What is DLSS 4 and how does it work?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p>
+                <strong>DLSS 4 (Deep Learning Super Sampling)</strong> is
+                NVIDIA's AI-powered upscaling technology:
+              </p>
+              <ul>
+                <li>
+                  <strong>AI Upscaling:</strong> Renders at lower resolution,
+                  upscales with AI for better performance
+                </li>
+                <li>
+                  <strong>Frame Generation:</strong> Creates additional frames
+                  using AI for smoother gameplay
+                </li>
+                <li>
+                  <strong>Reflex Integration:</strong> Reduces input latency
+                  for competitive gaming
+                </li>
+                <li>
+                  <strong>Quality Modes:</strong> Quality, Balanced,
+                  Performance, Ultra Performance
+                </li>
+              </ul>
+              <p class="text-muted">
+                DLSS 4 can provide up to 4x performance improvement in
+                supported games while maintaining or improving visual quality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              <i class="fas fa-shield text-warning me-2"></i>
+              What warranty and support do you provide?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p><strong>Warranty Coverage:</strong></p>
+              <ul>
+                <li>
+                  <strong>2-Year Manufacturer Warranty</strong> on all RTX
+                  graphics cards
+                </li>
+                <li>
+                  <strong>24/7 Technical Support</strong> via phone, email,
+                  and live chat
+                </li>
+                <li>
+                  <strong>Free Shipping</strong> on all orders within India
+                </li>
+                <li>
+                  <strong>30-Day Return Policy</strong> for unopened products
+                </li>
+                <li>
+                  <strong>Advanced RMA</strong> for faster replacement
+                  processing
+                </li>
+              </ul>
+              <p class="text-muted">
+                All products come with original manufacturer warranty.
+                Extended warranty options available at checkout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="contact-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Get in touch with our support team</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card bg-dark border-secondary">
+            <div class="card-body">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select class="form-select" id="subject">
+                      <option>Order Support</option>
+                      <option>Product Question</option>
+                      <option>Warranty</option>
+                      <option>Technical Support</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="order" class="form-label">Order Number (Optional)</label>
+                    <input type="text" class="form-control" id="order" />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="consent" required />
+                      <label class="form-check-label text-white" for="consent">
+                        I agree to the processing of my information for
+                        support purposes.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope text-primary"></i>
+              <div>
+                <h6>Email Support</h6>
+                <p>support@geforce-store.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone text-success"></i>
+              <div>
+                <h6>Phone Support</h6>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-clock text-warning"></i>
+              <div>
+                <h6>Support Hours</h6>
+                <p>
+                  Mon-Fri: 9:00 AM - 8:00 PM<br />Sat-Sun: 10:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt text-danger"></i>
+              <div>
+                <h6>Office Address</h6>
+                <p>123 Tech Street<br />Mumbai, Maharashtra 400001</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer bg-dark py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <img src="nvidia.png" alt="GeForce Store" height="40" class="mb-3" style="border-radius:4px;" />
+            <p class="text-muted">
+              Your trusted partner for premium NVIDIA GeForce RTX graphics
+              cards. Quality products, excellent service, and unbeatable
+              prices.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">RTX 5090</a></li>
+            <li><a href="#">RTX 5080</a></li>
+            <li><a href="#">RTX 4090</a></li>
+            <li><a href="#">RTX 4080 Super</a></li>
+            <li><a href="#">RTX 4070 Super</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Support</h6>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Shipping</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Legal</h6>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">
+            &copy; 2026 NVIDIA Ecosystem. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="payment-methods">
+            <span class="text-muted me-3">We Accept:</span>
+            <i class="fab fa-cc-visa text-primary me-2"></i>
+            <i class="fab fa-cc-mastercard text-warning me-2"></i>
+            <i class="fab fa-cc-amex text-info me-2"></i>
+            <i class="fab fa-cc-paypal text-success"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h4>Shopping Cart</h4>
+      <button class="close-cart" id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="cartItems">
+      <!-- Cart Items will be injected here -->
+      <div class="cart-empty-state">
+        <i class="fas fa-shopping-cart mb-3"></i>
+        <p>Your cart is empty.</p>
+        <button class="btn btn-primary mt-3" onclick="document.getElementById('closeCart').click()">
+          Start Shopping
+        </button>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary w-100 mb-2 checkout-btn">
+        Checkout
+      </button>
+      <button class="btn btn-outline-secondary w-100" id="clearCart">
+        Clear Cart
+      </button>
+    </div>
+  </div>
+  <!-- Wishlist Sidebar -->
+  <div class="cart-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h4>My Wishlist</h4>
+      <button class="close-cart" id="closeWishlist">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="wishlistItems">
+      <!-- Wishlist Items will be injected here -->
+      <div class="cart-empty-state">
+        <i class="far fa-heart mb-3"></i>
+        <p>Your wishlist is empty.</p>
+        <button class="btn btn-primary mt-3" onclick="document.getElementById('closeWishlist').click()">
+          Start Shopping
+        </button>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <button class="btn btn-outline-secondary w-100" id="clearWishlist">
+        Clear Wishlist
+      </button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

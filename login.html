@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - GeForce Store</title>
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="nvidia.png" />
+
+    <style>
+        body {
+            background-color: #050505;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .popup-modal {
+            background: #1e1e1e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: #888;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        .brand-logo {
+            width: 60px;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            background: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+        }
+
+        .form-control:focus {
+            background: #1a1a1a;
+            border-color: #76b900;
+            box-shadow: 0 0 0 0.2rem rgba(118, 185, 0, 0.25);
+            color: #fff;
+        }
+
+        .form-label {
+            color: #e0e0e0;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .btn-glow {
+            background: linear-gradient(135deg, #76b900, #5a8f00);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(118, 185, 0, 0.4);
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1050;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-modal">
+        <a href="index.html" class="close-btn" title="Close">&times;</a>
+
+        <div class="text-center">
+            <img src="nvidia.png" alt="GeForce Store Logo" class="brand-logo" style="border-radius:4px;" />
+            <h2 class="mb-2" style="font-weight: 800; color: #fff;">Sign In</h2>
+            <p class="text-muted mb-4">Log in to your account.</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required />
+            </div>
+
+            <div class="mb-4">
+                <label for="passwordInput" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password"
+                    required />
+            </div>
+
+            <button type="submit" class="btn-glow">
+                Sign In <i class="fas fa-sign-in-alt ms-2"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="toast-container"></div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('passwordInput').value;
+
+            if (email && email.includes('@') && password) {
+                let usersList = JSON.parse(localStorage.getItem('gpu_users_data')) || {};
+                let isNewUser = false;
+
+                if (usersList[email]) {
+                    if (usersList[email].password !== password) {
+                        showNotification("Incorrect password.", "error");
+                        return;
+                    }
+                } else {
+                    isNewUser = true;
+                    usersList[email] = {
+                        email: email,
+                        password: password,
+                        name: email.split('@')[0],
+                        phone: "",
+                        address: "",
+                        rewards: 500, // starting rewards
+                        privacy: {
+                            newsletter: true,
+                            dataSharing: false
+                        }
+                    };
+                    localStorage.setItem('gpu_users_data', JSON.stringify(usersList));
+                }
+
+                localStorage.setItem("gpu_user_logged_in", "true");
+                localStorage.setItem("gpu_user_email", email);
+
+                showNotification(isNewUser ? "Account created successfully! Redirecting..." : "Successfully logged in! Redirecting...", "success");
+
+                setTimeout(() => {
+                    const redirect = sessionStorage.getItem('login_redirect') || 'index.html';
+                    sessionStorage.removeItem('login_redirect');
+                    window.location.href = redirect;
+                }, 1000);
+            } else {
+                showNotification("Please enter a valid email and password.", "error");
+            }
+        });
+
+        function showNotification(message, type) {
+            type = type || "success";
+            var container = document.querySelector(".toast-container");
+            var colors = { success: "#76b900", warning: "#ffc107", error: "#dc3545", info: "#17a2b8" };
+
+            var toast = document.createElement("div");
+            toast.style.background = "rgba(30, 30, 30, 0.9)";
+            toast.style.borderLeft = "4px solid " + colors[type];
+            toast.style.padding = "1rem 1.5rem";
+            toast.style.borderRadius = "8px";
+            toast.style.color = "#fff";
+            toast.style.marginBottom = "1rem";
+            toast.style.boxShadow = "0 10px 30px rgba(0,0,0,0.5)";
+            toast.style.display = "flex";
+            toast.style.alignItems = "center";
+            toast.style.gap = "1rem";
+            toast.style.animation = "fadeIn 0.3s ease-out forwards";
+
+            toast.innerHTML = '<div>' + message + '</div>';
+            container.appendChild(toast);
+
+            setTimeout(function () {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.transition = 'all 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

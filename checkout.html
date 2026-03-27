@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - GeForce Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Add custom checkout styles here or in a separate file if needed, keeping it in style.css for consistency -->
+  <style>
+    .checkout-container {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .checkout-card {
+      background: #1e1e1e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 1rem;
+    }
+
+    .payment-option {
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .payment-option:hover {
+      border-color: #76b900;
+      background: #333;
+    }
+
+    .payment-option.selected {
+      border-color: #76b900;
+      background: rgba(118, 185, 0, 0.1);
+    }
+
+    .payment-option input {
+      margin-right: 1rem;
+    }
+
+    .payment-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      width: 30px;
+      text-align: center;
+    }
+
+    .order-summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .order-summary-item:last-child {
+      border-bottom: none;
+    }
+
+    .order-total {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #76b900;
+      text-align: right;
+      margin-top: 1rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1rem;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .step-item {
+      text-align: center;
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      background: #2a2a2a;
+      border: 2px solid #555;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.5rem;
+      font-weight: bold;
+      color: #aaa;
+      transition: all 0.3s ease;
+    }
+
+    .step-item.active .step-circle {
+      background: #76b900;
+      border-color: #76b900;
+      color: white;
+    }
+
+    .step-item.completed .step-circle {
+      background: #76b900;
+      border-color: #76b900;
+      color: white;
+    }
+
+    .step-line {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #333;
+      z-index: 1;
+    }
+
+    .step-line-progress {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      height: 2px;
+      background: #76b900;
+      z-index: 1;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar (Simplified) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo.png" alt="GeForce Store" height="40" class="me-2" style="border-radius:4px;" />
+        <span class="fw-bold fs-4 ms-2">GeForce Store</span>
+      </a>
+      <a href="index.html" class="btn btn-outline-light btn-sm">
+        <i class="fas fa-arrow-left me-2"></i>Back to Shop
+      </a>
+    </div>
+  </nav>
+
+  <div class="hero-section" style="display: block; min-height: 100vh">
+    <div class="hero-overlay"></div>
+    <div class="container checkout-container" style="position: relative; z-index: 2">
+      <div class="text-center mb-5 pt-4">
+        <h1><span class="text-gradient">Secure Checkout</span></h1>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="steps">
+        <div class="step-line"></div>
+        <div class="step-line-progress" id="stepProgress"></div>
+        <div class="step-item active" id="step1Indicator">
+          <div class="step-circle">1</div>
+          <div>Shipping</div>
+        </div>
+        <div class="step-item" id="step2Indicator">
+          <div class="step-circle">2</div>
+          <div>Payment</div>
+        </div>
+        <div class="step-item" id="step3Indicator">
+          <div class="step-circle">3</div>
+          <div>Confirmation</div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Left Column: Forms -->
+        <div class="col-lg-8">
+          <!-- Shipping Address Form -->
+          <div class="checkout-card" id="shippingSection">
+            <h4 class="form-section-title">
+              <i class="fas fa-truck me-2"></i>Shipping Address
+            </h4>
+            <form id="shippingForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" name="firstName" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" name="lastName" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Phone</label>
+                  <input type="tel" class="form-control" name="phone" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Address</label>
+                  <input type="text" class="form-control" name="address" placeholder="1234 Main St" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">City</label>
+                  <input type="text" class="form-control" name="city" required />
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">State</label>
+                  <input type="text" class="form-control" name="state" required />
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Zip</label>
+                  <input type="text" class="form-control" name="zip" required />
+                </div>
+              </div>
+              <div class="mt-4 text-end">
+                <button type="submit" class="btn btn-primary">
+                  Continue to Payment <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Payment Section (Hidden initially) -->
+          <div class="checkout-card d-none" id="paymentSection">
+            <h4 class="form-section-title">
+              <i class="fas fa-credit-card me-2"></i>Payment Method
+            </h4>
+            <form id="paymentForm">
+              <div class="mb-3">
+                <div class="payment-option selected" onclick="selectPayment('card')">
+                  <input type="radio" name="paymentOption" value="card" checked />
+                  <i class="fas fa-credit-card payment-icon text-info"></i>
+                  <div>
+                    <strong>Credit / Debit Card</strong>
+                    <div class="small text-muted">
+                      Pay securely with Visa, Mastercard, Amex
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card Details Form -->
+                <div id="cardDetails" class="ms-4 mb-4">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label">Card Number</label>
+                      <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="0000 0000 0000 0000" maxlength="19"
+                          id="cardNumber" required />
+                        <i class="fas fa-lock position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Expiration (MM/YY)</label>
+                      <input type="text" class="form-control" placeholder="MM/YY" maxlength="5" id="cardExpiry"
+                        required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">CVV</label>
+                      <input type="text" class="form-control" placeholder="123" maxlength="3" id="cardCvv" required />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Cardholder Name</label>
+                      <input type="text" class="form-control" placeholder="John Doe" id="cardName" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="payment-option" onclick="selectPayment('upi')">
+                  <input type="radio" name="paymentOption" value="upi" />
+                  <i class="fas fa-mobile-alt payment-icon text-success"></i>
+                  <div>
+                    <strong>UPI</strong>
+                    <div class="small text-muted">
+                      Google Pay, PhonePe, Paytm
+                    </div>
+                  </div>
+                </div>
+
+                <div id="upiDetails" class="ms-4 mb-4 d-none">
+                  <label class="form-label">UPI ID</label>
+                  <input type="text" class="form-control" placeholder="username@bank" id="upiId" />
+                </div>
+
+                <div class="payment-option" onclick="selectPayment('cod')">
+                  <input type="radio" name="paymentOption" value="cod" />
+                  <i class="fas fa-money-bill-wave payment-icon text-warning"></i>
+                  <div>
+                    <strong>Cash on Delivery</strong>
+                    <div class="small text-muted">
+                      Pay when you receive the order
+                    </div>
+                  </div>
+                </div>
+
+                <div id="codDetails" class="ms-4 mb-4 d-none">
+                  <div class="alert alert-warning border-0 bg-warning bg-opacity-10 text-warning">
+                    <i class="fas fa-info-circle me-2"></i>You can pay via
+                    Cash or UPI upon delivery.
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-outline-secondary" onclick="showShipping()">
+                  <i class="fas fa-arrow-left me-2"></i>Back
+                </button>
+                <button type="submit" class="btn btn-success btn-lg">
+                  <i class="fas fa-check-circle me-2"></i>Place Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div class="col-lg-4">
+          <div class="checkout-card">
+            <h5 class="mb-4">
+              <i class="fas fa-shopping-cart me-2"></i>Order Summary
+            </h5>
+            <div id="orderSummaryItems">
+              <!-- Items will be injected here via JS -->
+            </div>
+
+            <div class="mt-4 pt-3 border-top border-secondary">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">₹0</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Shipping</span>
+                <span class="text-success">Free</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Tax (18% GST)</span>
+                <span id="summaryTax">₹0</span>
+              </div>
+              <div class="order-total">
+                <small class="d-block text-muted fs-6 fw-normal">Total Amount</small>
+                <span id="summaryTotal">₹0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-3 text-muted">
+            <small><i class="fas fa-lock me-1"></i> Secure Checkout</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark border-secondary">
+        <div class="modal-body text-center p-5">
+          <div class="mb-4">
+            <i class="fas fa-check-circle text-success" style="font-size: 5rem"></i>
+          </div>
+          <h2 class="mb-3">Order Placed Successfully!</h2>
+          <p class="text-muted mb-4">
+            Thank you for your purchase. A confirmation email has been sent to
+            your inbox. Your order will be shipped shortly.
+          </p>
+          <div class="card bg-secondary bg-opacity-10 mb-4">
+            <div class="card-body">
+              <p class="mb-1">Order Number</p>
+              <h4 class="text-info" id="orderNumber">#GPU-83920</h4>
+            </div>
+          </div>
+          <a href="index.html" class="btn btn-primary w-100">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="checkout.js"></script>
+  <script>
+    // Simple function to handle payment selection UI
+    function selectPayment(type) {
+      // Update radio buttons and visual selection
+      document
+        .querySelectorAll('input[name="paymentOption"]')
+        .forEach((r) => (r.checked = false));
+      document.querySelector(`input[value="${type}"]`).checked = true;
+
+      document
+        .querySelectorAll(".payment-option")
+        .forEach((el) => el.classList.remove("selected"));
+      document
+        .querySelector(`input[value="${type}"]`)
+        .closest(".payment-option")
+        .classList.add("selected");
+
+      // Show/Hide details
+      document.getElementById("cardDetails").classList.add("d-none");
+      document.getElementById("upiDetails").classList.add("d-none");
+      var codDetails = document.getElementById("codDetails");
+      if (codDetails) codDetails.classList.add("d-none");
+
+      // Remove required attributes from hidden fields
+      document.getElementById("cardNumber").required = false;
+      document.getElementById("cardExpiry").required = false;
+      document.getElementById("cardCvv").required = false;
+      document.getElementById("cardName").required = false;
+      document.getElementById("upiId").required = false;
+
+      if (type === "card") {
+        document.getElementById("cardDetails").classList.remove("d-none");
+        document.getElementById("cardNumber").required = true;
+        document.getElementById("cardExpiry").required = true;
+        document.getElementById("cardCvv").required = true;
+        document.getElementById("cardName").required = true;
+      } else if (type === "upi") {
+        document.getElementById("upiDetails").classList.remove("d-none");
+        document.getElementById("upiId").required = true;
+      } else if (type === "cod") {
+        if (codDetails) codDetails.classList.remove("d-none");
+      }
+    }
+
+    // Switch back to shipping
+    function showShipping() {
+      document.getElementById("paymentSection").classList.add("d-none");
+      document.getElementById("shippingSection").classList.remove("d-none");
+
+      document.getElementById("stepProgress").style.width = "0%";
+      document.getElementById("step2Indicator").classList.remove("active");
+    }
+  </script>
+</body>
+
+</html>

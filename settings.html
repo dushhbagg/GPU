@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings - GeForce Store</title>
+
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .settings-sidebar {
+            background: #1e1e1e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem 0;
+        }
+
+        .nav-pills .nav-link {
+            color: #b0b0b0;
+            border-radius: 0;
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            text-align: left;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-pills .nav-link i {
+            width: 25px;
+        }
+
+        .nav-pills .nav-link:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+        }
+
+        .nav-pills .nav-link.active {
+            background: rgba(118, 185, 0, 0.1);
+            color: #76b900;
+            border-left: 3px solid #76b900;
+        }
+
+        .settings-content {
+            background: #1e1e1e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2.5rem;
+            min-height: 500px;
+        }
+
+        .reward-card {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border: 1px solid rgba(118, 185, 0, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .reward-points {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #76b900;
+            margin: 1rem 0;
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1050;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Logo" height="40" class="me-2" style="border-radius:4px;" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="graphics-cards.html">Graphics Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="laptops.html">Laptops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">Settings</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Search products..." />
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="nav-icons">
+                        <a href="settings.html" class="nav-icon" title="Account">
+                            <i class="fas fa-user" style="color: #76b900;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Settings Section -->
+    <div class="container mb-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="fw-bold text-white">Account Settings</h2>
+                <p class="text-muted">Manage your profile, security, and preferences.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-start">
+            <!-- Sidebar -->
+            <div class="col-lg-3 mb-4">
+                <div class="settings-sidebar nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-selected="true">
+                        <i class="fas fa-user"></i> Profile
+                    </button>
+                    <button class="nav-link" id="v-pills-security-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-security" type="button" role="tab" aria-selected="false">
+                        <i class="fas fa-lock"></i> Security
+                    </button>
+                    <button class="nav-link" id="v-pills-rewards-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-rewards" type="button" role="tab" aria-selected="false">
+                        <i class="fas fa-gift"></i> Rewards
+                    </button>
+                    <button class="nav-link" id="v-pills-privacy-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-privacy" type="button" role="tab" aria-selected="false">
+                        <i class="fas fa-shield-alt"></i> Privacy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-9">
+                <div class="settings-content tab-content" id="v-pills-tabContent">
+
+                    <!-- Profile Tab -->
+                    <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel">
+                        <h4 class="mb-4">Personal Information</h4>
+                        <form id="profileForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="profileName" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address (Read-only)</label>
+                                    <input type="email" class="form-control" id="profileEmail" disabled />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="profilePhone" placeholder="+1..." />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Shipping Address</label>
+                                    <textarea class="form-control" id="profileAddress" rows="3"
+                                        placeholder="Enter your full shipping address"></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="tab-pane fade" id="v-pills-security" role="tabpanel">
+                        <h4 class="mb-4">Update Password</h4>
+                        <form id="securityForm">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Current Password</label>
+                                    <input type="password" class="form-control" id="currentPassword" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">New Password</label>
+                                    <input type="password" class="form-control" id="newPassword" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Confirm New Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" required />
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Rewards Tab -->
+                    <div class="tab-pane fade" id="v-pills-rewards" role="tabpanel">
+                        <h4 class="mb-4">Your Membership Rewards</h4>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="reward-card">
+                                    <i class="fas fa-crown text-warning fa-3x mb-2"></i>
+                                    <h5 class="text-white">Total Available Points</h5>
+                                    <div class="reward-points" id="rewardPointsDisplay">0</div>
+                                    <p class="text-muted">You earn 10 points for every $100 spent in our store. Points
+                                        can be redeemed for exclusive hardware discounts.</p>
+                                    <button class="btn btn-outline-secondary mt-2" disabled>Redeem Points (Coming
+                                        Soon)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Tab -->
+                    <div class="tab-pane fade" id="v-pills-privacy" role="tabpanel">
+                        <h4 class="mb-4">Privacy & Notifications</h4>
+                        <form id="privacyForm">
+                            <div class="mb-4">
+                                <div class="form-check form-switch fs-5">
+                                    <input class="form-check-input" type="checkbox" id="newsletterToggle">
+                                    <label class="form-check-label text-white ms-2" for="newsletterToggle">Subscribe to
+                                        Newsletters</label>
+                                </div>
+                                <p class="text-muted ms-5 mt-1 fs-6">Receive emails about new hardware drops, RTX
+                                    technology, and exclusive store offers.</p>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check form-switch fs-5">
+                                    <input class="form-check-input" type="checkbox" id="analyticToggle">
+                                    <label class="form-check-label text-white ms-2" for="analyticToggle">Share Analytic
+                                        Data</label>
+                                </div>
+                                <p class="text-muted ms-5 mt-1 fs-6">Help us improve the store experience by sharing
+                                    anonymous usage data.</p>
+                            </div>
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userEmail = localStorage.getItem("gpu_user_email") || "guest_user";
+
+            // Load user data
+            let usersList = JSON.parse(localStorage.getItem('gpu_users_data')) || {};
+            if (!usersList[userEmail]) {
+                usersList[userEmail] = {
+                    name: "", email: "", phone: "", address: "", rewards: 500, password: "", privacy: { newsletter: true, dataSharing: false }
+                };
+            }
+            let userData = usersList[userEmail];
+
+            if (userData) {
+                // Pre-fill profile
+                document.getElementById("profileName").value = userData.name || "";
+                document.getElementById("profileEmail").value = userData.email || "";
+                document.getElementById("profilePhone").value = userData.phone || "";
+                document.getElementById("profileAddress").value = userData.address || "";
+
+                // Pre-fill rewards
+                document.getElementById("rewardPointsDisplay").innerText = userData.rewards || 0;
+
+                // Pre-fill privacy
+                document.getElementById("newsletterToggle").checked = userData.privacy?.newsletter ?? true;
+                document.getElementById("analyticToggle").checked = userData.privacy?.dataSharing ?? false;
+            }
+
+            // Handle Profile Submit
+            document.getElementById("profileForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                userData.name = document.getElementById("profileName").value;
+                userData.phone = document.getElementById("profilePhone").value;
+                userData.address = document.getElementById("profileAddress").value;
+
+                usersList[userEmail] = userData;
+                localStorage.setItem('gpu_users_data', JSON.stringify(usersList));
+                showNotification("Profile updated successfully!");
+            });
+
+            // Handle Security Submit
+            document.getElementById("securityForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                const currentPass = document.getElementById("currentPassword").value;
+                const newPass = document.getElementById("newPassword").value;
+                const confirmPass = document.getElementById("confirmPassword").value;
+
+                if (currentPass !== userData.password) {
+                    showNotification("Current password does not match.", "error");
+                    return;
+                }
+                if (newPass !== confirmPass) {
+                    showNotification("New passwords do not match.", "error");
+                    return;
+                }
+
+                userData.password = newPass;
+                usersList[userEmail] = userData;
+                localStorage.setItem('gpu_users_data', JSON.stringify(usersList));
+
+                document.getElementById("securityForm").reset();
+                showNotification("Password updated successfully!");
+            });
+
+            // Handle Privacy Submit
+            document.getElementById("privacyForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (!userData.privacy) userData.privacy = {};
+                userData.privacy.newsletter = document.getElementById("newsletterToggle").checked;
+                userData.privacy.dataSharing = document.getElementById("analyticToggle").checked;
+
+                usersList[userEmail] = userData;
+                localStorage.setItem('gpu_users_data', JSON.stringify(usersList));
+                showNotification("Privacy preferences saved!");
+            });
+        });
+
+
+
+        function showNotification(message, type) {
+            type = type || "success";
+            var container = document.querySelector(".toast-container");
+            var colors = { success: "#76b900", warning: "#ffc107", error: "#dc3545", info: "#17a2b8" };
+
+            var toast = document.createElement("div");
+            toast.style.background = "rgba(30, 30, 30, 0.9)";
+            toast.style.borderLeft = "4px solid " + colors[type];
+            toast.style.padding = "1rem 1.5rem";
+            toast.style.borderRadius = "8px";
+            toast.style.color = "#fff";
+            toast.style.marginBottom = "1rem";
+            toast.style.boxShadow = "0 10px 30px rgba(0,0,0,0.5)";
+            toast.style.display = "flex";
+            toast.style.alignItems = "center";
+            toast.style.gap = "1rem";
+            toast.style.animation = "fadeInUp 0.3s ease";
+
+            toast.innerHTML = '<div>' + message + '</div>';
+            container.appendChild(toast);
+
+            setTimeout(function () {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+                toast.style.transition = 'all 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

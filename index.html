@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeForce Store - Power Your Imagination</title>
+
+  <!-- FontAwesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Custom CSS (Main Store Styles) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo.png" alt="Logo" height="40" class="me-2" style="border-radius:4px;" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="graphics-cards.html">Graphics Cards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="laptops.html">Laptops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Settings</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-box me-3">
+            <input type="text" class="form-control" placeholder="Search products..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="nav-icons dropstart">
+            <a href="#" class="nav-icon" title="Wishlist" style="margin-right: 15px;">
+              <i class="fas fa-heart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" title="Cart" style="margin-right: 15px;">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+              title="Account" style="text-decoration: none;">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark mt-4" aria-labelledby="accountDropdown"
+              id="accountDropdownMenu">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section bg-dark">
+    <div class="hero-overlay"
+      style="background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.95) 100%);"></div>
+    <div class="container relative z-3">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6 text-center text-lg-start mt-5 pt-5">
+          <div class="hero-content">
+            <h1 class="hero-title display-3 fw-bold mb-4">
+              The Ultimate <br /><span class="text-gradient">GeForce RTX</span> Experience.
+            </h1>
+            <p class="hero-description mb-5 fs-5 mx-auto mx-lg-0" style="color: #d0d0d0;">
+              Discover unparalleled graphics performance. Unleash AI-powered brilliance and ray tracing with the all-new
+              NVIDIA GeForce RTX 50 Series GPUs.
+            </p>
+
+            <div class="hero-buttons gap-3 d-flex justify-content-center justify-content-lg-start flex-wrap">
+              <a href="graphics-cards.html" class="btn btn-primary btn-lg px-5 py-3 fs-5"
+                style="border-radius: 5px; font-weight: 700;">
+                Shop Graphics Cards
+              </a>
+              <a href="laptops.html" class="btn btn-outline-light btn-lg px-5 py-3 fs-5"
+                style="border-radius: 5px; font-weight: 700;">
+                Shop Laptops
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block mt-5 pt-5 text-center">
+          <img src="RTX 5090 main.png" alt="RTX 5090" class="img-fluid hero-gpu-image"
+            style="transform: scale(1.2) rotate(-5deg); filter: drop-shadow(0 0 40px rgba(118, 185, 0, 0.3));" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Features Section -->
+  <section class="trust-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-truck text-primary"></i>
+            <h6>Free Shipping</h6>
+            <small>On all premium orders</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-shield-alt text-success"></i>
+            <h6>2-Year Warranty</h6>
+            <small>Comprehensive hardware coverage</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-gem text-warning"></i>
+            <h6>Premium Quality</h6>
+            <small>Only authentic hardware</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-headset text-info"></i>
+            <h6>24/7 Support</h6>
+            <small>Expert technical assistance</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="products-section py-5 bg-dark">
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h2 class="fw-bold mb-1">Featured <span class="text-gradient">Hardware</span></h2>
+          <p class="text-muted mb-0">Experience the bleeding edge of visual computing.</p>
+        </div>
+        <a href="graphics-cards.html" class="btn btn-outline-light btn-sm px-4" style="border-radius: 5px;">View All</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-badge" style="background: #76b900; color: #000;">
+              New Arrival</div>
+            <div class="product-image">
+              <img src="RTX 5090 main.png" alt="RTX 5090" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 5090</h5>
+              <p class="text-muted small mb-3">The ultimate BFGPU. 32GB GDDR7, Next-Gen Ray Tracing, DLSS 4.0.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="fs-4 fw-bold" style="color:#76b900;">₹219,000</span>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="rtx-5090"
+                  data-name="NVIDIA GeForce RTX 5090" data-price="1999" style="font-weight:700;">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-badge popular">
+              Bestseller</div>
+            <div class="product-image">
+              <img src="RTX 4090 main.png" alt="RTX 4090" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4090</h5>
+              <p class="text-muted small mb-3">Unmatched 4K performance. 24GB GDDR6X, Ada Lovelace Architecture.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="fs-4 fw-bold" style="color:#76b900;">₹158,000</span>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="rtx-4090"
+                  data-name="NVIDIA GeForce RTX 4090" data-price="1599" style="font-weight:700;">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="RTX-4080-SUPER.png" alt="RTX 4080 Super" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">NVIDIA GeForce RTX 4080 Super</h5>
+              <p class="text-muted small mb-3">Supercharged gaming. 16GB GDDR6X, Advanced AI Performance.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="fs-4 fw-bold" style="color:#76b900;">₹105,000</span>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-id="rtx-4080-super"
+                  data-name="NVIDIA GeForce RTX 4080 Super" data-price="999" style="font-weight:700;">Add to
+                  Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestseller Laptops Section -->
+  <section class="products-section py-5" style="background: rgba(18, 18, 18, 0.4);">
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h2 class="fw-bold mb-1">Bestseller <span class="text-gradient">Laptops</span></h2>
+          <p class="text-muted mb-0">The most popular portable powerhouses among creators and gamers.</p>
+        </div>
+        <a href="laptops.html" class="btn btn-outline-light btn-sm px-4" style="border-radius: 5px;">View All
+          Laptops</a>
+      </div>
+      <div class="row g-4">
+        <!-- Laptop 1: Lenovo Legion -->
+        <div class="col-md-4">
+          <div class="product-card h-100">
+            <div class="product-badge popular">Bestseller</div>
+            <div class="product-image">
+              <img src="Lenovo Legion.webp" alt="Lenovo Legion Pro 7i" class="img-fluid" />
+            </div>
+            <div class="product-content d-flex flex-column">
+              <h5 class="product-title">Lenovo Legion Pro 7i</h5>
+              <div class="product-specs mb-3">
+                <div class="spec-item"><i class="fas fa-microchip text-info"></i> <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item"><i class="fas fa-memory text-warning"></i> <span>32GB DDR5 5600MHz</span></div>
+                <div class="spec-item"><i class="fas fa-desktop text-danger"></i> <span>16" 240Hz WQXGA</span></div>
+                <div class="spec-item"><i class="fas fa-tachometer-alt text-primary"></i> <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price mt-auto mb-3">
+                <span class="price">₹3,45,000</span>
+                <small class="text-muted d-block">Free Shipping</small>
+              </div>
+              <div class="product-actions mt-auto d-flex gap-2">
+                <button class="btn btn-primary flex-grow-1 add-to-cart-btn" data-id="lenovo-legion-4090"
+                  data-name="Lenovo Legion Pro 7i" data-price="345000">
+                  <i class="fas fa-shopping-cart"></i> Cart
+                </button>
+                <button class="btn btn-outline-secondary flex-grow-1 add-to-wishlist-btn" data-id="lenovo-legion-4090"
+                  data-name="Lenovo Legion Pro 7i" data-price="345000">
+                  <i class="fas fa-heart"></i> Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop 2: Asus ROG Strix -->
+        <div class="col-md-4">
+          <div class="product-card h-100">
+            <div class="product-badge" style="background: #e63946; color: white;">Trending</div>
+            <div class="product-image">
+              <img src="Asus Rog.jpg" alt="ASUS ROG Strix Scar 18" class="img-fluid" />
+            </div>
+            <div class="product-content d-flex flex-column">
+              <h5 class="product-title">ASUS ROG Strix Scar 18</h5>
+              <div class="product-specs mb-3">
+                <div class="spec-item"><i class="fas fa-microchip text-info"></i> <span>Intel Core i9 13980HX</span>
+                </div>
+                <div class="spec-item"><i class="fas fa-memory text-warning"></i> <span>64GB DDR5 RAM</span></div>
+                <div class="spec-item"><i class="fas fa-desktop text-danger"></i> <span>18" Nebula HDR Mini LED</span>
+                </div>
+                <div class="spec-item"><i class="fas fa-tachometer-alt text-primary"></i> <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price mt-auto mb-3">
+                <span class="price">₹3,80,000</span>
+                <small class="text-muted d-block">Free Shipping</small>
+              </div>
+              <div class="product-actions mt-auto d-flex gap-2">
+                <button class="btn btn-primary flex-grow-1 add-to-cart-btn" data-id="asus-rog-4090"
+                  data-name="ASUS ROG Strix Scar 18" data-price="380000">
+                  <i class="fas fa-shopping-cart"></i> Cart
+                </button>
+                <button class="btn btn-outline-secondary flex-grow-1 add-to-wishlist-btn" data-id="asus-rog-4090"
+                  data-name="ASUS ROG Strix Scar 18" data-price="380000">
+                  <i class="fas fa-heart"></i> Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop 3: MSI Titan -->
+        <div class="col-md-4">
+          <div class="product-card h-100">
+            <div class="product-badge">Extreme</div>
+            <div class="product-image">
+              <img src="MSI TItan.jpg" alt="MSI Titan 18 HX" class="img-fluid" />
+            </div>
+            <div class="product-content d-flex flex-column">
+              <h5 class="product-title">MSI Titan 18 HX</h5>
+              <div class="product-specs mb-3">
+                <div class="spec-item"><i class="fas fa-microchip text-info"></i> <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item"><i class="fas fa-memory text-warning"></i> <span>128GB DDR5 RAM</span></div>
+                <div class="spec-item"><i class="fas fa-desktop text-danger"></i> <span>18" 4K 120Hz Mini LED</span>
+                </div>
+                <div class="spec-item"><i class="fas fa-tachometer-alt text-primary"></i> <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price mt-auto mb-3">
+                <span class="price">₹5,50,000</span>
+                <small class="text-muted d-block">Free Shipping</small>
+              </div>
+              <div class="product-actions mt-auto d-flex gap-2">
+                <button class="btn btn-primary flex-grow-1 add-to-cart-btn" data-id="msi-titan-4090"
+                  data-name="MSI Titan 18 HX" data-price="550000">
+                  <i class="fas fa-shopping-cart"></i> Cart
+                </button>
+                <button class="btn btn-outline-secondary flex-grow-1 add-to-wishlist-btn" data-id="msi-titan-4090"
+                  data-name="MSI Titan 18 HX" data-price="550000">
+                  <i class="fas fa-heart"></i> Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Section -->
+  <section class="features-section py-5 border-top border-dark">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose the GeForce Store?</h2>
+        <p class="section-subtitle">The official destination for elite gamers and professional creators.</p>
+      </div>
+
+      <div class="row g-5 align-items-center mb-5">
+        <div class="col-lg-6">
+          <h3 class="fw-bold mb-4">Unleash Next-Gen <span class="text-gradient">Performance</span></h3>
+          <p class="text-muted fs-5 mb-4">
+            We provide direct access to the most powerful computational hardware on the market. From the groundbreaking
+            Ada Lovelace architecture of the RTX 40 and 50 series, to ultra-portable laptops that pack desktop-tier
+            processing power.
+          </p>
+          <ul class="list-unstyled text-muted fs-5">
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> Optimized for AI and Ray Tracing
+              workloads.</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> Exclusive access to limited edition
+              and flagship models.</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> Performance assured through rigorous
+              pre-shipping benchmarks.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bg-dark border-secondary p-4 h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon mb-0 me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <h4 class="mb-0 text-white">Built for Enthusiasts</h4>
+            </div>
+            <p class="text-muted mb-0 fs-5 pb-2">Whether you're rendering 8K video, training machine learning models, or
+              pushing competitive games to 360Hz, our curated selection ensures you never compromise on framerates or
+              render times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5 mt-auto" style="background: #000; border-top: 1px solid #1a1a1a;">
+    <div class="container text-center">
+      <img src="nvidia.png" alt="GeForce Store" height="40" class="mb-4" style="border-radius:4px;" />
+      <p class="text-muted mx-auto fs-6" style="max-width: 500px;">
+        The official source for the world's most advanced graphics cards and creator laptops. Power your imagination
+        today.
+      </p>
+      <p class="text-muted mt-4 mb-0">&copy; 2026 NVIDIA Ecosystem. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart & Wishlist Sidebars go here via JS normally, but we need the HTML skeleton on index too -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h5>Your Cart</h5>
+      <button class="cart-close" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="d-flex justify-content-between mb-3">
+        <strong>Total:</strong>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-light flex-grow-1" id="clearCart">Clear</button>
+        <button class="btn btn-primary flex-grow-1 checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+  <div class="cart-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h5>Your Wishlist</h5>
+      <button class="cart-close" id="closeWishlist"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="wishlistItems"></div>
+    <div class="cart-footer">
+      <button class="btn btn-outline-light w-100" id="clearWishlist">Clear Wishlist</button>
+    </div>
+  </div>
+
+  <div class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLoggedIn = localStorage.getItem("gpu_user_logged_in") === "true";
+      const userEmail = localStorage.getItem("gpu_user_email");
+      const dropdownMenu = document.getElementById("accountDropdownMenu");
+
+      let usersList = JSON.parse(localStorage.getItem('gpu_users_data')) || {};
+      let userData = usersList[userEmail] || {};
+      let userName = userData.name || userEmail || "User";
+
+      if (isLoggedIn && dropdownMenu) {
+        document.querySelector('.nav-icon i').style.color = '#76b900'; // Make icon green to indicate active session
+        dropdownMenu.innerHTML = `
+          <li><h6 class="dropdown-header text-white" style="font-size: 0.9rem;">Signed in as<br/><strong style="color: #76b900;">${userName}</strong></h6></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog me-2"></i> Settings & Profile</a></li>
+          <li><a class="dropdown-item text-danger mt-2" href="#" onclick="handleLogout(event)"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+        `;
+      } else if (dropdownMenu) {
+        dropdownMenu.innerHTML = `
+          <li><h6 class="dropdown-header" style="font-size: 0.9rem;">You are not logged in</h6></li>
+          <li><a class="dropdown-item text-success mt-2" href="login.html" style="font-weight: 600;"><i class="fas fa-sign-in-alt me-2"></i> Sign In / Register</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="fas fa-sliders-h me-2"></i> Guest Preferences</a></li>
+        `;
+      }
+    });
+
+    function handleLogout(e) {
+      e.preventDefault();
+      localStorage.removeItem("gpu_user_logged_in");
+      localStorage.removeItem("gpu_user_email");
+      window.location.reload();
+    }
+  </script>
+</body>
+
+</html>

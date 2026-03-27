@@ -1,0 +1,1906 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Premium Gaming & Creator Laptops powered by NVIDIA GeForce RTX. Best prices, fast shipping, 2-year warranty." />
+  <meta name="keywords" content="NVIDIA RTX, GeForce, Laptops, Gaming Laptops, Creator Laptops, GeForce Store" />
+
+  <title>GeForce Store - Premium Gaming & Creator Laptops</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="logo.png" alt="GeForce Store" height="40" class="me-2" style="border-radius:4px;" />
+        <span class="fw-bold fs-4 ms-2">GeForce Store</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="graphics-cards.html">Graphics Cards</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="laptops.html">Laptops</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#compareModal">Compare</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#support">Support</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="search-box me-3">
+            <input type="text" class="form-control" placeholder="Search GPUs..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="nav-icons dropstart">
+            <a href="#" class="nav-icon" title="Wishlist" style="margin-right: 15px;">
+              <i class="fas fa-heart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" title="Cart" style="margin-right: 15px;">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-icon" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+              title="Account" style="text-decoration: none;">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark mt-4" aria-labelledby="accountDropdown"
+              id="accountDropdownMenu">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section bg-dark no-bg-image">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6 text-center text-lg-start mt-5 pt-5">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="text-gradient">Premium RTX</span><br />
+              Gaming & Creator Laptops
+            </h1>
+            <p class="hero-description mx-auto mx-lg-0">
+              Experience the future of portable gaming and content creation.
+              Featuring cutting-edge mobile GPUs, these laptops deliver
+              unprecedented performance with real-time ray tracing, AI-powered
+              DLSS, and advanced creator workflows on the go.
+            </p>
+            <div class="hero-features justify-content-center justify-content-lg-start">
+              <div class="feature-item">
+                <i class="fas fa-bolt text-warning"></i>
+                <span>RT Cores</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-brain text-info"></i>
+                <span>Tensor Cores</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-magic text-success"></i>
+                <span>DLSS 4</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-palette text-danger"></i>
+                <span>Studio Ready</span>
+              </div>
+            </div>
+            <div class="hero-buttons d-flex justify-content-center justify-content-lg-start">
+              <a href="#laptops" class="btn btn-primary btn-lg me-3" style="font-weight: 700;">
+                <i class="fas fa-shopping-cart me-2"></i>Shop Now
+              </a>
+              <a href="#laptops" class="btn btn-outline-light btn-lg" style="font-weight: 700;">
+                <i class="fas fa-laptop me-2"></i>View Laptops
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block mt-5 pt-5 text-center fade-in">
+          <img src="msi_titan.png" alt="Premium RTX Laptop" class="img-fluid hero-gpu-image"
+            style="transform: scale(1.1) rotate(2deg); filter: drop-shadow(0 0 30px rgba(118, 185, 0, 0.4));" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-truck text-primary"></i>
+            <h6>Free Shipping</h6>
+            <small>On all orders</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-shield-alt text-success"></i>
+            <h6>2-Year Warranty</h6>
+            <small>Full coverage</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-lock text-warning"></i>
+            <h6>Secure Payment</h6>
+            <small>SSL encrypted</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="trust-item">
+            <i class="fas fa-headset text-info"></i>
+            <h6>24/7 Support</h6>
+            <small>Always here</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="laptops" class="products-section py-5 bg-dark">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">High-Performance Laptops</h2>
+        <p class="section-subtitle">
+          Premium Gaming & Creator Laptops powered by RTX
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge">Extreme</div>
+            <div class="product-image">
+              <img src="MSI TItan.jpg" alt="MSI Titan 18 HX" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">MSI Titan 18 HX</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>128GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>18" 4K 120Hz Mini LED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹5,50,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="msi-titan-4090"
+                  data-name="MSI Titan 18 HX" data-price="550000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="msi-titan-4090"
+                  data-name="MSI Titan 18 HX" data-price="550000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Popular</div>
+            <div class="product-image">
+              <img src="Lenovo Legion.webp" alt="Lenovo Legion Pro 7i" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Lenovo Legion Pro 7i</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 5600MHz</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 240Hz WQXGA</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹3,45,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="lenovo-legion-4090"
+                  data-name="Lenovo Legion Pro 7i" data-price="345000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="lenovo-legion-4090"
+                  data-name="Lenovo Legion Pro 7i" data-price="345000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Asus Rog.jpg" alt="ASUS ROG Strix Scar 18" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">ASUS ROG Strix Scar 18</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 13980HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>64GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>18" Nebula HDR Mini LED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹3,80,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="asus-rog-4090"
+                  data-name="ASUS ROG Strix Scar 18" data-price="380000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="asus-rog-4090"
+                  data-name="ASUS ROG Strix Scar 18" data-price="380000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge">Creator</div>
+            <div class="product-image">
+              <img src="Dell XPS.avif" alt="Dell XPS 17" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Dell XPS 17</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 13700H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>17" 4K+ Touch</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4070 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹2,80,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="dell-xps-4070"
+                  data-name="Dell XPS 17" data-price="280000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="dell-xps-4070"
+                  data-name="Dell XPS 17" data-price="280000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="MSI Raider.jpg" alt="MSI Raider GE78 HX" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">MSI Raider GE78 HX</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 5600MHz</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>17" 240Hz QHD+</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4080 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹3,15,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="msi-raider-4080"
+                  data-name="MSI Raider GE78 HX" data-price="315000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="msi-raider-4080"
+                  data-name="MSI Raider GE78 HX" data-price="315000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Acer Predator.jpg" alt="Acer Predator Helios 16" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Acer Predator Helios 16</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 13700HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 240Hz Mini LED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4070 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹1,75,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="acer-predator-4070"
+                  data-name="Acer Predator Helios 16" data-price="175000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="acer-predator-4070"
+                  data-name="Acer Predator Helios 16" data-price="175000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Sleek</div>
+            <div class="product-image">
+              <img src="Asus Zephyrus.jpg" alt="ASUS ROG Zephyrus G16" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">ASUS ROG Zephyrus G16</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core Ultra 9 185H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB LPDDR5X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 240Hz OLED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4080 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹2,95,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="asus-zephyrus-4080"
+                  data-name="ASUS ROG Zephyrus G16" data-price="295000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="asus-zephyrus-4080"
+                  data-name="ASUS ROG Zephyrus G16" data-price="295000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge">Creator</div>
+            <div class="product-image">
+              <img src="MSI stealth.jpg" alt="MSI Stealth 16 Studio" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">MSI Stealth 16 Studio</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 13900H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>64GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 4K UHD+ Mini LED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4070 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹2,45,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="msi-stealth-4070"
+                  data-name="MSI Stealth 16 Studio" data-price="245000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="msi-stealth-4070"
+                  data-name="MSI Stealth 16 Studio" data-price="245000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Value</div>
+            <div class="product-image">
+              <img src="Lenovo Legion 5.jpg" alt="Lenovo Legion Pro 5i" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Lenovo Legion Pro 5i</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 14700HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 5600MHz</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 165Hz WQXGA</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹1,45,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="lenovo-legion5-4060"
+                  data-name="Lenovo Legion Pro 5i" data-price="145000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="lenovo-legion5-4060"
+                  data-name="Lenovo Legion Pro 5i" data-price="145000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Best Seller</div>
+            <div class="product-image">
+              <img src="Asus TUF.png" alt="ASUS TUF Gaming F15" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">ASUS TUF Gaming F15</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 12700H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR4 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4050 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹85,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="asus-tuf-4050"
+                  data-name="ASUS TUF Gaming F15" data-price="85000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="asus-tuf-4050"
+                  data-name="ASUS TUF Gaming F15" data-price="85000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="MSI Katana.jpg" alt="MSI Katana 15" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">MSI Katana 15</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 13620H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹1,05,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="msi-katana-4060"
+                  data-name="MSI Katana 15" data-price="105000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="msi-katana-4060"
+                  data-name="MSI Katana 15" data-price="105000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Value</div>
+            <div class="product-image">
+              <img src="Acer Nitro.jpg" alt="Acer Nitro V 15" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Acer Nitro V 15</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i5 13420H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4050 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹75,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="acer-nitro-4050"
+                  data-name="Acer Nitro V 15" data-price="75000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="acer-nitro-4050"
+                  data-name="Acer Nitro V 15" data-price="75000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Lenovo LOQ.webp" alt="Lenovo LOQ 15" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Lenovo LOQ 15</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 13620H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹95,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="lenovo-loq-4060"
+                  data-name="Lenovo LOQ 15" data-price="95000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="lenovo-loq-4060"
+                  data-name="Lenovo LOQ 15" data-price="95000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Sleek</div>
+            <div class="product-image">
+              <img src="HP Victus.jpg" alt="HP Victus 16" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">HP Victus 16</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>AMD Ryzen 7 7840HS</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16.1" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹1,02,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="hp-victus-4060"
+                  data-name="HP Victus 16" data-price="102000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="hp-victus-4060"
+                  data-name="HP Victus 16" data-price="102000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Gigabyte G5 KF.jpg" alt="Gigabyte G5 KF" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Gigabyte G5 KF</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i5 12500H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR4 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹80,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="gigabyte-g5-4060"
+                  data-name="Gigabyte G5 KF" data-price="80000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="gigabyte-g5-4060"
+                  data-name="Gigabyte G5 KF" data-price="80000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Premium</div>
+            <div class="product-image">
+              <img src="Aleinware X16.jpg" alt="Alienware x16 R2" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Alienware x16 R2</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core Ultra 9 185H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB LPDDR5X</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 240Hz QHD+</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4080 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹3,25,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="alienware-x16-4080"
+                  data-name="Alienware x16 R2" data-price="325000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="alienware-x16-4080"
+                  data-name="Alienware x16 R2" data-price="325000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Razor Blade 16.jpg" alt="Razer Blade 16" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Razer Blade 16</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 14900HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" OLED 240Hz</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹4,10,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="razer-blade16-4090"
+                  data-name="Razer Blade 16" data-price="410000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="razer-blade16-4090"
+                  data-name="Razer Blade 16" data-price="410000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Workstation</div>
+            <div class="product-image">
+              <img src="Lenovo Thinkpad.jpg" alt="Lenovo ThinkPad P16v" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Lenovo ThinkPad P16v</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i7 13700H</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" WUXGA IPS</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 2000 Ada Gen</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹2,10,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="thinkpad-p16v-ada"
+                  data-name="Lenovo ThinkPad P16v" data-price="210000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="thinkpad-p16v-ada"
+                  data-name="Lenovo ThinkPad P16v" data-price="210000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="MSI vector.jpg" alt="MSI Vector 16 HX" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">MSI Vector 16 HX</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 13980HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>32GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 240Hz FHD+</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4080 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹2,55,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="msi-vector-4080"
+                  data-name="MSI Vector 16 HX" data-price="255000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="msi-vector-4080"
+                  data-name="MSI Vector 16 HX" data-price="255000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge">Creator</div>
+            <div class="product-image">
+              <img src="ASus Probook.jpg" alt="ASUS ProArt Studiobook" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">ASUS ProArt Studiobook</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 13980HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>64GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>16" 3.2K OLED Touch</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4070 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹3,00,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="asus-proart-4070"
+                  data-name="ASUS ProArt Studiobook" data-price="300000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="asus-proart-4070"
+                  data-name="ASUS ProArt Studiobook" data-price="300000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Acer Predator Trion.jpg" alt="Acer Predator Triton 17X" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">Acer Predator Triton 17X</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>Intel Core i9 13900HX</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>64GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>17" WQXGA Mini LED</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4090 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹4,25,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="acer-triton-4090"
+                  data-name="Acer Predator Triton 17X" data-price="425000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="acer-triton-4090"
+                  data-name="Acer Predator Triton 17X" data-price="425000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-badge popular">Best Value</div>
+            <div class="product-image">
+              <img src="Asus A tuf.jpg" alt="ASUS TUF Gaming A15" class="img-fluid" />
+            </div>
+            <div class="product-content">
+              <h5 class="product-title">ASUS TUF Gaming A15</h5>
+              <div class="product-specs">
+                <div class="spec-item">
+                  <i class="fas fa-microchip text-info"></i>
+                  <span>AMD Ryzen 9 7940HS</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-memory text-warning"></i>
+                  <span>16GB DDR5 RAM</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-desktop text-danger"></i>
+                  <span>15.6" 144Hz FHD</span>
+                </div>
+                <div class="spec-item">
+                  <i class="fas fa-tachometer-alt text-primary"></i>
+                  <span>RTX 4060 GPU</span>
+                </div>
+              </div>
+              <div class="product-price">
+                <span class="price">₹1,15,000</span>
+                <small class="text-muted">Free Shipping</small>
+              </div>
+              <div class="product-actions">
+                <button class="btn btn-primary w-100 mb-2 add-to-cart-btn" data-id="asus-tuf-a15-4060"
+                  data-name="ASUS TUF Gaming A15" data-price="115000">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary w-100 add-to-wishlist-btn" data-id="asus-tuf-a15-4060"
+                  data-name="ASUS TUF Gaming A15" data-price="115000">
+                  <i class="fas fa-heart me-2"></i>Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Section -->
+  <section id="features" class="features-section py-5 border-top border-dark">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose GeForce Laptops?</h2>
+        <p class="section-subtitle">Desktop-class performance, ultimate portability.</p>
+      </div>
+
+      <div class="row g-5 align-items-center mb-5 fade-up">
+        <div class="col-lg-6">
+          <h3 class="fw-bold mb-4">Unleash Next-Gen <span class="text-gradient">Mobility</span></h3>
+          <p class="text-muted fs-5 mb-4">
+            We provide direct access to the most powerful portable workstations on the market. Maximize your frames with
+            the Ada Lovelace architecture, packing absolute desktop-tier processing power into incredibly sleek chasses.
+          </p>
+          <ul class="list-unstyled text-muted fs-5">
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> NVIDIA Max-Q technologies for peak
+              efficiency.</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> Advanced thermal designs for zero
+              thermal-throttling.</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i> Studio-validated displays with
+              perfect color accuracy.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bg-dark border-secondary p-4 h-100 fade-in">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon mb-0 me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4 class="mb-0 text-white">Uncompromised Power</h4>
+            </div>
+            <p class="text-muted mb-0 fs-5 pb-2">Whether you're developing 3D worlds, rendering high-resolution videos
+              from an airport, or pushing competitive games to 360Hz, GeForce RTX laptops ensure you never compromise on
+              render times or framerates just because you're away from a desk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="contact-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Get in touch with our support team</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card bg-dark border-secondary">
+            <div class="card-body">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select class="form-select" id="subject">
+                      <option>Order Support</option>
+                      <option>Product Question</option>
+                      <option>Warranty</option>
+                      <option>Technical Support</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="order" class="form-label">Order Number (Optional)</label>
+                    <input type="text" class="form-control" id="order" />
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="consent" required />
+                      <label class="form-check-label text-white" for="consent">
+                        I agree to the processing of my information for
+                        support purposes.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope text-primary"></i>
+              <div>
+                <h6>Email Support</h6>
+                <p>support@geforce-store.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone text-success"></i>
+              <div>
+                <h6>Phone Support</h6>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-clock text-warning"></i>
+              <div>
+                <h6>Support Hours</h6>
+                <p>
+                  Mon-Fri: 9:00 AM - 8:00 PM<br />Sat-Sun: 10:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt text-danger"></i>
+              <div>
+                <h6>Office Address</h6>
+                <p>123 Tech Street<br />Mumbai, Maharashtra 400001</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer bg-dark py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <img src="nvidia.png" alt="GeForce Store" height="40" class="mb-3" style="border-radius:4px;" />
+            <p class="text-muted">
+              Your trusted partner for premium NVIDIA GeForce RTX gaming and
+              creator laptops. Quality products, excellent service, and
+              unbeatable prices.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Products</h6>
+          <ul class="footer-links">
+            <li><a href="#">Gaming Laptops</a></li>
+            <li><a href="#">Creator Laptops</a></li>
+            <li><a href="#">Thin & Light</a></li>
+            <li><a href="#">Budget friendly</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Support</h6>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Shipping</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-title">Legal</h6>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">
+            &copy; 2026 NVIDIA Ecosystem. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="payment-methods">
+            <span class="text-muted me-3">We Accept:</span>
+            <i class="fab fa-cc-visa text-primary me-2"></i>
+            <i class="fab fa-cc-mastercard text-warning me-2"></i>
+            <i class="fab fa-cc-amex text-info me-2"></i>
+            <i class="fab fa-cc-paypal text-success"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h4>Shopping Cart</h4>
+      <button class="close-cart" id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="cartItems">
+      <!-- Cart Items will be injected here -->
+      <div class="cart-empty-state">
+        <i class="fas fa-shopping-cart mb-3"></i>
+        <p>Your cart is empty.</p>
+        <button class="btn btn-primary mt-3" onclick="document.getElementById('closeCart').click()">
+          Start Shopping
+        </button>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary w-100 mb-2 checkout-btn">
+        Checkout
+      </button>
+      <button class="btn btn-outline-secondary w-100" id="clearCart">
+        Clear Cart
+      </button>
+    </div>
+  </div>
+  <!-- Wishlist Sidebar -->
+  <div class="cart-sidebar" id="wishlistSidebar">
+    <div class="cart-header">
+      <h4>My Wishlist</h4>
+      <button class="close-cart" id="closeWishlist">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-body" id="wishlistItems">
+      <!-- Wishlist Items will be injected here -->
+      <div class="cart-empty-state">
+        <i class="far fa-heart mb-3"></i>
+        <p>Your wishlist is empty.</p>
+        <button class="btn btn-primary mt-3" onclick="document.getElementById('closeWishlist').click()">
+          Start Shopping
+        </button>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <button class="btn btn-outline-secondary w-100" id="clearWishlist">
+        Clear Wishlist
+      </button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Compare Laptops Modal -->
+  <div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border-secondary">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="compareModalLabel"><i class="fas fa-chart-bar me-2"></i>Compare Laptops</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-4">
+            <div class="col-md-5">
+              <label class="form-label form-label-lg" style="font-weight: 600;">Select First Laptop</label>
+              <select class="form-select form-select-lg bg-dark text-white border-secondary" id="laptopSelect1"
+                style="font-weight: 500;">
+                <option value="">-- Choose a Laptop --</option>
+              </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end justify-content-center pb-1">
+              <button class="btn btn-primary btn-lg w-100 mb-0" id="btnCompareAction"
+                style="font-weight: 700; height: 48px;"><i class="fas fa-exchange-alt me-2"></i>Compare</button>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label form-label-lg" style="font-weight: 600;">Select Second Laptop</label>
+              <select class="form-select form-select-lg bg-dark text-white border-secondary" id="laptopSelect2"
+                style="font-weight: 500;">
+                <option value="">-- Choose a Laptop --</option>
+              </select>
+            </div>
+          </div>
+          <div id="compareResults" style="display:none; animation: fadeIn 0.5s ease-in-out;">
+            <div class="alert text-center fw-bold fs-5 shadow-sm" id="compareWinnerAlert" role="alert"
+              style="border: none;"></div>
+            <div class="table-responsive mt-3 rounded shadow-sm border border-secondary" style="overflow: hidden;">
+              <table class="table table-dark table-hover text-center align-middle mb-0">
+                <thead class="bg-secondary bg-opacity-25">
+                  <tr>
+                    <th width="20%" class="py-3 fs-6">Specification</th>
+                    <th width="40%" id="compHdr1" class="text-info fs-5 py-3"></th>
+                    <th width="40%" id="compHdr2" class="text-warning fs-5 py-3"></th>
+                  </tr>
+                </thead>
+                <tbody id="compareTableBody" class="fs-6" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #compareTableBody td:first-child {
+      background: rgba(0, 0, 0, 0.2) !important;
+      font-weight: 600;
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+
+    #compareTableBody tr:hover {
+      background-color: rgba(118, 185, 0, 0.05);
+    }
+  </style>
+
+  <script>
+    const laptopDb = [
+      { name: "MSI Titan 18 HX", cpu: "Intel Core i9 14900HX", ram: "128GB DDR5 RAM", display: '18" 4K 120Hz Mini LED', gpu: "RTX 4090 GPU", price: "₹5,50,000", score: 100 },
+      { name: "ASUS ROG Strix Scar 18", cpu: "Intel Core i9 13980HX", ram: "64GB DDR5 RAM", display: '18" Nebula HDR Mini LED', gpu: "RTX 4090 GPU", price: "₹3,80,000", score: 95 },
+      { name: "Lenovo Legion Pro 7i", cpu: "Intel Core i9 14900HX", ram: "32GB DDR5 5600MHz", display: '16" 240Hz WQXGA', gpu: "RTX 4090 GPU", price: "₹3,45,000", score: 92 },
+      { name: "MSI Raider GE78 HX", cpu: "Intel Core i9 14900HX", ram: "32GB DDR5 5600MHz", display: '17" 240Hz QHD+', gpu: "RTX 4080 GPU", price: "₹3,15,000", score: 85 },
+      { name: "Dell XPS 17", cpu: "Intel Core i7 13700H", ram: "32GB DDR5 RAM", display: '17" 4K+ Touch', gpu: "RTX 4070 GPU", price: "₹2,80,000", score: 75 },
+      { name: "Acer Predator Helios 16", cpu: "Intel Core i7 13700HX", ram: "16GB DDR5 RAM", display: '16" 240Hz Mini LED', gpu: "RTX 4070 GPU", price: "₹1,75,000", score: 70 },
+      { name: "ASUS ROG Zephyrus G16", cpu: "Intel Core Ultra 9 185H", ram: "32GB LPDDR5X", display: '16" 240Hz OLED', gpu: "RTX 4080 GPU", price: "₹2,95,000", score: 88 },
+      { name: "MSI Stealth 16 Studio", cpu: "Intel Core i9 13900H", ram: "64GB DDR5 RAM", display: '16" 4K UHD+ Mini LED', gpu: "RTX 4070 GPU", price: "₹2,45,000", score: 80 },
+      { name: "Lenovo Legion Pro 5i", cpu: "Intel Core i7 14700HX", ram: "16GB DDR5 5600MHz", display: '16" 165Hz WQXGA', gpu: "RTX 4060 GPU", price: "₹1,45,000", score: 65 },
+      { name: "ASUS TUF Gaming F15", cpu: "Intel Core i7 12700H", ram: "16GB DDR4 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4050 GPU", price: "₹85,000", score: 50 },
+      { name: "MSI Katana 15", cpu: "Intel Core i7 13620H", ram: "16GB DDR5 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4060 GPU", price: "₹1,05,000", score: 60 },
+      { name: "Acer Nitro V 15", cpu: "Intel Core i5 13420H", ram: "16GB DDR5 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4050 GPU", price: "₹75,000", score: 45 },
+      { name: "Lenovo LOQ 15", cpu: "Intel Core i7 13620H", ram: "16GB DDR5 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4060 GPU", price: "₹95,000", score: 58 },
+      { name: "HP Victus 16", cpu: "AMD Ryzen 7 7840HS", ram: "16GB DDR5 RAM", display: '16.1" 144Hz FHD', gpu: "RTX 4060 GPU", price: "₹1,02,000", score: 59 },
+      { name: "Gigabyte G5 KF", cpu: "Intel Core i5 12500H", ram: "16GB DDR4 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4060 GPU", price: "₹80,000", score: 55 },
+      { name: "Alienware x16 R2", cpu: "Intel Core Ultra 9 185H", ram: "32GB LPDDR5X", display: '16" 240Hz QHD+', gpu: "RTX 4080 GPU", price: "₹3,25,000", score: 86 },
+      { name: "Razer Blade 16", cpu: "Intel Core i9 14900HX", ram: "32GB DDR5 RAM", display: '16" OLED 240Hz', gpu: "RTX 4090 GPU", price: "₹4,10,000", score: 98 },
+      { name: "Lenovo ThinkPad P16v", cpu: "Intel Core i7 13700H", ram: "32GB DDR5 RAM", display: '16" WUXGA IPS', gpu: "RTX 2000 Ada Gen", price: "₹2,10,000", score: 72 },
+      { name: "MSI Vector 16 HX", cpu: "Intel Core i9 13980HX", ram: "32GB DDR5 RAM", display: '16" 240Hz FHD+', gpu: "RTX 4080 GPU", price: "₹2,55,000", score: 84 },
+      { name: "ASUS ProArt Studiobook", cpu: "Intel Core i9 13980HX", ram: "64GB DDR5 RAM", display: '16" 3.2K OLED Touch', gpu: "RTX 4070 GPU", price: "₹3,00,000", score: 82 },
+      { name: "Acer Predator Triton 17X", cpu: "Intel Core i9 13900HX", ram: "64GB DDR5 RAM", display: '17" WQXGA Mini LED', gpu: "RTX 4090 GPU", price: "₹4,25,000", score: 96 },
+      { name: "ASUS TUF Gaming A15", cpu: "AMD Ryzen 9 7940HS", ram: "16GB DDR5 RAM", display: '15.6" 144Hz FHD', gpu: "RTX 4060 GPU", price: "₹1,15,000", score: 65 }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sel1 = document.getElementById('laptopSelect1');
+      const sel2 = document.getElementById('laptopSelect2');
+
+      if (sel1 && sel2) {
+        laptopDb.forEach((laptop, index) => {
+          sel1.add(new Option(laptop.name, index));
+          sel2.add(new Option(laptop.name, index));
+        });
+
+        document.getElementById('btnCompareAction').addEventListener('click', () => {
+          const idx1 = sel1.value;
+          const idx2 = sel2.value;
+
+          if (idx1 === '' || idx2 === '') {
+            alert('Please select both Laptops to compare.');
+            return;
+          }
+          if (idx1 === idx2) {
+            alert('Please select two different Laptops.');
+            return;
+          }
+
+          const l1 = laptopDb[idx1];
+          const l2 = laptopDb[idx2];
+
+          document.getElementById('compHdr1').innerText = l1.name;
+          document.getElementById('compHdr2').innerText = l2.name;
+
+          const tbody = document.getElementById('compareTableBody');
+          tbody.innerHTML = `
+            <tr><td>CPU</td><td>${l1.cpu}</td><td>${l2.cpu}</td></tr>
+            <tr><td>GPU</td><td>${l1.gpu}</td><td>${l2.gpu}</td></tr>
+            <tr><td>RAM</td><td>${l1.ram}</td><td>${l2.ram}</td></tr>
+            <tr><td>Display</td><td>${l1.display}</td><td>${l2.display}</td></tr>
+            <tr><td>Price</td><td class="text-success fw-bold">${l1.price}</td><td class="text-success fw-bold">${l2.price}</td></tr>
+          `;
+
+          const winnerAlert = document.getElementById('compareWinnerAlert');
+          if (l1.score && l2.score) {
+            if (l1.score > l2.score) {
+              winnerAlert.className = 'alert alert-info text-center fw-bold mt-3 shadow-sm';
+              winnerAlert.style.backgroundColor = 'rgba(13, 202, 240, 0.1)';
+              winnerAlert.style.color = '#0dcaf0';
+              winnerAlert.innerHTML = `<i class="fas fa-trophy text-warning me-2 fs-4 align-middle"></i> ${l1.name} is the overall better performer!`;
+            } else {
+              winnerAlert.className = 'alert alert-warning text-center fw-bold mt-3 shadow-sm';
+              winnerAlert.style.backgroundColor = 'rgba(255, 193, 7, 0.1)';
+              winnerAlert.style.color = '#ffc107';
+              winnerAlert.innerHTML = `<i class="fas fa-trophy text-info me-2 fs-4 align-middle"></i> ${l2.name} is the overall better performer!`;
+            }
+            winnerAlert.style.display = 'block';
+          } else {
+            winnerAlert.style.display = 'none';
+          }
+
+          document.getElementById('compareResults').style.display = 'block';
+        });
+      }
+
+      // Automatically add "Customize" buttons to all laptops
+      const actionGroups = document.querySelectorAll('.product-actions');
+      actionGroups.forEach(group => {
+        const cartBtn = group.querySelector('.add-to-cart-btn');
+        // Prevent double injection if something re-renders
+        if (cartBtn && !cartBtn.parentElement.classList.contains('d-flex')) {
+          const id = cartBtn.getAttribute('data-id');
+          const name = cartBtn.getAttribute('data-name');
+          const price = cartBtn.getAttribute('data-price');
+
+          cartBtn.outerHTML = `
+            <div class="d-flex gap-2 mb-2">
+              <button class="btn btn-primary flex-grow-1 add-to-cart-btn" data-id="${id}" data-name="${name}" data-price="${price}">
+                <i class="fas fa-shopping-cart"></i> Cart
+              </button>
+              <button class="btn btn-success flex-grow-1 customize-btn" data-bs-toggle="modal" data-bs-target="#customLaptopModal" data-id="${id}" data-name="${name}" data-base-price="${price}" style="font-weight: 600;">
+                <i class="fas fa-cogs"></i> Customize
+              </button>
+            </div>
+          `;
+        }
+      });
+
+      // --- Custom Laptop Configurator Modal Logic ---
+      let basePriceModal = 50000;
+      let customizeLaptopName = "Custom Laptop";
+      let customizeLaptopId = "custom";
+
+      const selectorsModal = document.querySelectorAll('.custom-modal-select');
+      const totalPriceElModal = document.getElementById('customModalTotalPrice');
+      const basePriceTextEl = document.getElementById('modalBasePriceText');
+      const modalTitleEl = document.getElementById('customLaptopModalLabel');
+
+      function calculateCustomModalPrice() {
+        let total = basePriceModal;
+        selectorsModal.forEach(select => {
+          total += parseInt(select.value) || 0;
+        });
+        if (totalPriceElModal) {
+          totalPriceElModal.textContent = '₹' + total.toLocaleString('en-IN');
+        }
+        return total;
+      }
+
+      // Listen for dynamic clicks on the new customize buttons
+      document.addEventListener('click', function (e) {
+        const target = e.target.closest('.customize-btn');
+        if (target) {
+          basePriceModal = parseInt(target.getAttribute('data-base-price')) || 50000;
+          customizeLaptopName = target.getAttribute('data-name') || "Custom Laptop";
+          customizeLaptopId = target.getAttribute('data-id') || "custom-laptop";
+
+          if (basePriceTextEl) basePriceTextEl.textContent = '₹' + basePriceModal.toLocaleString('en-IN');
+          if (modalTitleEl) modalTitleEl.innerHTML = `<i class="fas fa-tools text-success me-2"></i>Build Your PC: ${customizeLaptopName}`;
+
+          // Reset selections
+          document.getElementById('modalCpu').selectedIndex = 0;
+          document.getElementById('modalGpu').selectedIndex = 0;
+          document.getElementById('modalRam').selectedIndex = 0;
+          document.getElementById('modalStorage').selectedIndex = 0;
+          document.getElementById('modalDisplay').selectedIndex = 0;
+
+          // Fetch specs dynamically from the particular clicked laptop card
+          const card = target.closest('.product-card');
+          if (card) {
+            const specs = card.querySelectorAll('.spec-item span');
+            if (specs.length >= 4) {
+              const baseCpu = document.getElementById('modalCpu').options[0];
+              const baseRam = document.getElementById('modalRam').options[0];
+              const baseDisplay = document.getElementById('modalDisplay').options[0];
+              const baseGpu = document.getElementById('modalGpu').options[0];
+
+              let cpuText = specs[0].textContent;
+              let ramText = specs[1].textContent;
+              let displayText = specs[2].textContent;
+              let gpuText = specs[3].textContent;
+
+              if (baseCpu) baseCpu.text = `Keep ${cpuText} (+₹0)`;
+              if (baseRam) baseRam.text = `Keep ${ramText} (+₹0)`;
+              if (baseDisplay) baseDisplay.text = `Keep ${displayText} (+₹0)`;
+              if (baseGpu) baseGpu.text = `Keep ${gpuText} (+₹0)`;
+
+              // Dynamic Upgrade Naming Logic based on base CPU
+              const cpuOpt1 = document.getElementById('modalCpu').options[1];
+              const cpuOpt2 = document.getElementById('modalCpu').options[2];
+              if (cpuText.includes('i9') || cpuText.includes('Ryzen 9')) {
+                cpuOpt1.text = 'Upgrade to Intel Core Ultra 9 185H (+₹25,000 difference)';
+                cpuOpt2.text = 'Upgrade to Intel Core Ultra 9 285K (+₹45,000 difference)';
+              } else if (cpuText.includes('i7') || cpuText.includes('Ryzen 7')) {
+                cpuOpt1.text = 'Upgrade to Intel Core i9 14900HX (+₹25,000 difference)';
+                cpuOpt2.text = 'Upgrade to Intel Core Ultra 9 185H (+₹45,000 difference)';
+              } else {
+                cpuOpt1.text = 'Upgrade to Intel Core i7 13700H (+₹25,000 difference)';
+                cpuOpt2.text = 'Upgrade to Intel Core i9 14900HX (+₹45,000 difference)';
+              }
+
+              // Dynamic Upgrade Naming Logic based on base GPU
+              const gpuOpt1 = document.getElementById('modalGpu').options[1];
+              const gpuOpt2 = document.getElementById('modalGpu').options[2];
+              if (gpuText.includes('4090')) {
+                gpuOpt1.text = 'Upgrade to NVIDIA RTX 5090 24GB (+₹35,000 difference)';
+                gpuOpt2.text = 'Upgrade to Dual NVIDIA RTX 4090 SLI (+₹80,000 difference)';
+              } else if (gpuText.includes('4080')) {
+                gpuOpt1.text = 'Upgrade to NVIDIA RTX 4090 16GB (+₹35,000 difference)';
+                gpuOpt2.text = 'Upgrade to NVIDIA RTX 4090 24GB VRAM Mod (+₹80,000 difference)';
+              } else if (gpuText.includes('4070')) {
+                gpuOpt1.text = 'Upgrade to NVIDIA RTX 4080 12GB (+₹35,000 difference)';
+                gpuOpt2.text = 'Upgrade to NVIDIA RTX 4090 16GB (+₹80,000 difference)';
+              } else {
+                gpuOpt1.text = 'Upgrade to NVIDIA RTX 4070 8GB (+₹35,000 difference)';
+                gpuOpt2.text = 'Upgrade to NVIDIA RTX 4080 12GB (+₹80,000 difference)';
+              }
+
+              // Dynamic Upgrade Naming Logic based on base RAM
+              const ramOpt1 = document.getElementById('modalRam').options[1];
+              const ramOpt2 = document.getElementById('modalRam').options[2];
+              let baseStorageVal = "1TB PCIe Gen4 NVMe"; // Default assumption
+
+              if (ramText.includes('16GB')) {
+                ramOpt1.text = 'Upgrade to 32GB DDR5 RAM (+₹8,000 difference)';
+                ramOpt2.text = 'Upgrade to 64GB DDR5 RAM (+₹18,000 difference)';
+                baseStorageVal = "1TB PCIe Gen4 NVMe";
+              } else if (ramText.includes('32GB')) {
+                ramOpt1.text = 'Upgrade to 64GB DDR5 RAM (+₹8,000 difference)';
+                ramOpt2.text = 'Upgrade to 128GB DDR5 RAM (+₹18,000 difference)';
+                baseStorageVal = "2TB PCIe Gen4 NVMe";
+              } else if (ramText.includes('64GB')) {
+                ramOpt1.text = 'Upgrade to 128GB DDR5 RAM (+₹8,000 difference)';
+                ramOpt2.text = 'Upgrade to 256GB DDR5 RAM (+₹18,000 difference)';
+                baseStorageVal = "4TB PCIe Gen4 NVMe";
+              } else if (ramText.includes('128GB')) {
+                ramOpt1.text = 'Upgrade to 256GB DDR5 RAM (+₹8,000 difference)';
+                ramOpt2.text = 'Upgrade to 512GB DDR5 RAM (+₹18,000 difference)';
+                baseStorageVal = "8TB PCIe Gen4 NVMe";
+              }
+
+              // Update storage dynamically based on inferred base storage class
+              const baseStorage = document.getElementById('modalStorage').options[0];
+              const storageOpt1 = document.getElementById('modalStorage').options[1];
+              const storageOpt2 = document.getElementById('modalStorage').options[2];
+
+              if (baseStorage) baseStorage.text = `Keep ${baseStorageVal} (+₹0)`;
+
+              if (baseStorageVal.includes('1TB')) {
+                storageOpt1.text = 'Upgrade to 2TB PCIe Gen4 NVMe (+₹12,000 difference)';
+                storageOpt2.text = 'Upgrade to 4TB Gen4 NVMe (+₹28,000 difference)';
+              } else if (baseStorageVal.includes('2TB')) {
+                storageOpt1.text = 'Upgrade to 4TB Gen4 NVMe (+₹12,000 difference)';
+                storageOpt2.text = 'Upgrade to 8TB Gen4 NVMe (+₹28,000 difference)';
+              } else if (baseStorageVal.includes('4TB')) {
+                storageOpt1.text = 'Upgrade to 8TB Gen4 NVMe (+₹12,000 difference)';
+                storageOpt2.text = 'Upgrade to 16TB Enterprise SSD (+₹28,000 difference)';
+              } else {
+                storageOpt1.text = 'Upgrade to 16TB Enterprise SSD (+₹12,000 difference)';
+                storageOpt2.text = 'Upgrade to 32TB Storage Array (+₹28,000 difference)';
+              }
+            }
+          }
+
+          calculateCustomModalPrice();
+        }
+      });
+
+      if (totalPriceElModal) {
+        calculateCustomModalPrice();
+        selectorsModal.forEach(sel => sel.addEventListener('change', calculateCustomModalPrice));
+      }
+
+      const resetModalBtn = document.getElementById('resetCustomModalBtn');
+      if (resetModalBtn) {
+        resetModalBtn.addEventListener('click', () => {
+          document.getElementById('modalCpu').selectedIndex = 0;
+          document.getElementById('modalGpu').selectedIndex = 0;
+          document.getElementById('modalRam').selectedIndex = 0;
+          document.getElementById('modalStorage').selectedIndex = 0;
+          document.getElementById('modalDisplay').selectedIndex = 0;
+          calculateCustomModalPrice();
+        });
+      }
+
+      const addToCartModalBtn = document.getElementById('addCustomToCartModalBtn');
+      if (addToCartModalBtn) {
+        addToCartModalBtn.addEventListener('click', () => {
+          const cpuText = document.getElementById('modalCpu').options[document.getElementById('modalCpu').selectedIndex].text.split(' (+')[0];
+          const gpuText = document.getElementById('modalGpu').options[document.getElementById('modalGpu').selectedIndex].text.split(' (+')[0];
+          const ramText = document.getElementById('modalRam').options[document.getElementById('modalRam').selectedIndex].text.split(' (+')[0];
+          const storageText = document.getElementById('modalStorage').options[document.getElementById('modalStorage').selectedIndex].text.split(' (+')[0];
+          const displayText = document.getElementById('modalDisplay').options[document.getElementById('modalDisplay').selectedIndex].text.split(' (+')[0];
+
+          const finalPrice = calculateCustomModalPrice();
+
+          const customProduct = {
+            id: customizeLaptopId + '-custom-' + Date.now(),
+            name: 'Custom Built: ' + customizeLaptopName,
+            price: finalPrice,
+            image: 'nvidia.png',
+            quantity: 1,
+            details: `CPU: ${cpuText} | GPU: ${gpuText} | RAM: ${ramText} | Storage: ${storageText} | Display: ${displayText}`
+          };
+
+          let cart = [];
+          try {
+            const saved = localStorage.getItem('gpu_cart');
+            if (saved) cart = JSON.parse(saved);
+          } catch (e) { }
+
+          cart.push(customProduct);
+          localStorage.setItem('gpu_cart', JSON.stringify(cart));
+
+          alert('Your custom configured ' + customizeLaptopName + ' has been added to your cart!');
+          window.location.reload();
+        });
+      }
+    });
+  </script>
+
+  <!-- Custom Laptop Modal -->
+  <div class="modal fade" id="customLaptopModal" tabindex="-1" aria-labelledby="customLaptopModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border-secondary" style="border: 1px solid #76b900;">
+        <div class="modal-header border-secondary" style="background: rgba(118,185,0,0.1);">
+          <h5 class="modal-title" id="customLaptopModalLabel"><i class="fas fa-tools text-success me-2"></i>Build Your
+            PC</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted mb-4">You have selected a base model. The Base Price includes the standard factory
+            components. Upgrade individual components below for an additional fee. Upgrades will replace the factory
+            components.</p>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Processor (CPU) Upgrades</label>
+              <select class="form-select bg-dark text-white border-secondary custom-modal-select" id="modalCpu">
+                <option value="0" selected>Keep Base Factory CPU (+₹0)</option>
+                <option value="25000">Upgrade to Next Tier (+₹25,000 difference)</option>
+                <option value="45000">Upgrade to Max Tier (+₹45,000 difference)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Graphics Card (GPU) Upgrades</label>
+              <select class="form-select bg-dark text-white border-secondary custom-modal-select" id="modalGpu">
+                <option value="0" selected>Keep Base Factory GPU (+₹0)</option>
+                <option value="35000">Upgrade to Next Tier (+₹35,000 difference)</option>
+                <option value="80000">Upgrade to Max Tier (+₹80,000 difference)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">System Memory (RAM) Upgrades</label>
+              <select class="form-select bg-dark text-white border-secondary custom-modal-select" id="modalRam">
+                <option value="0" selected>Keep Base Factory RAM (+₹0)</option>
+                <option value="8000">Double Capacity (+₹8,000 difference)</option>
+                <option value="18000">Quadruple Capacity (+₹18,000 difference)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Storage (SSD) Upgrades</label>
+              <select class="form-select bg-dark text-white border-secondary custom-modal-select" id="modalStorage">
+                <option value="0" selected>Keep Base Factory Storage (+₹0)</option>
+                <option value="12000">Double Capacity (+₹12,000 difference)</option>
+                <option value="28000">Quadruple Capacity (+₹28,000 difference)</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label fw-bold">Display Upgrades</label>
+              <select class="form-select bg-dark text-white border-secondary custom-modal-select" id="modalDisplay">
+                <option value="0" selected>Keep Base Factory Display (+₹0)</option>
+                <option value="15000">Upgrade to High Refresh Rate (+₹15,000 difference)</option>
+                <option value="35000">Upgrade to 4K / OLED (+₹35,000 difference)</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-4 p-3 rounded" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Base Chassis Price (Base Specs)</span>
+              <span id="modalBasePriceText">₹0</span>
+            </div>
+            <hr class="border-secondary my-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <strong class="fs-5">Estimated Total</strong>
+              <strong class="fs-4 text-success" id="customModalTotalPrice">₹0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-outline-light" id="resetCustomModalBtn">Reset Options</button>
+          <button type="button" class="btn btn-primary fw-bold" id="addCustomToCartModalBtn" style="min-width: 150px;">
+            <i class="fas fa-cart-plus me-2"></i>Build & Add To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
